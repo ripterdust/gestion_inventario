@@ -36,7 +36,7 @@ Route::get('/', [DashboardController::class, 'index'])
 // Employees
 Route::get('/employees', [EmployeesController::class, 'index'])
     ->middleware('auth')
-    ->name('home');
+    ->name('employees');
 
 // ******* Authentication
 
