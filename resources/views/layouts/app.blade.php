@@ -43,9 +43,9 @@
 
 <div class="dashboard">
     <div class="nav">
-        <div class="name">
+        <a href="" class="name">
             {{ auth()->user()->name }}
-        </div>
+        </a>
 
         <a href="{{route('login.out')}}" class="out">Cerrar Sesión</a>
     </div>
