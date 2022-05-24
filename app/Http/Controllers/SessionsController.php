@@ -14,13 +14,13 @@ class SessionsController extends Controller
     // Store user
     public function store(Request $request){
         $request->validate([
-            "email" => "required",
-            "password" => "required"
+            'email' => 'required',
+            'password' => 'required'
         ]);
 
         if(auth()->attempt(request(['email', 'password'])) == false){
-            return back()->withError([
-                'message' => 'El correo o la contraseña son incorrectas'
+            return back()->withErrors([
+                'message' => 'The email or password are incorrects'
             ]);
         }
 
