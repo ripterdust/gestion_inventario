@@ -4,6 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+class Employee {
+    public $name;
+    public $mail;
+    public $position;
+    public $department;
+    public $joined;
+
+}
 class EmployeesController extends Controller
 {
     /**
@@ -14,9 +22,21 @@ class EmployeesController extends Controller
     public function index()
     {   
 
+        $employees = array();
+
+        for($i = 0; $i<= 10; $i++){
+            $employee = new Employee;
+            $employee->name = 'Bryan';
+            $employee->mail = 'bryantello2010@hotmail.com';
+            $employee->position = 'Fullstack developer';
+            $employee->department = 'Development';
+            $employee->joined = date('Y-m-d');
+            $employees[$i] = $employee;
+        }
         
 
-        return view('dashboard.employees');
+
+        return view('dashboard.employees', ['employees' => $employees]);
     }
 
     /**

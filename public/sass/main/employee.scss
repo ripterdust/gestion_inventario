@@ -1,0 +1,37 @@
+.dashboard {
+    height: 100%;
+    .employees {
+        width: 100%;
+        background: white;
+        max-height: 100%;
+        box-shadow: $boxShadow;
+        border-radius: 2em;
+        padding: 1.5em;
+        .title {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1em;
+
+            tr:nth-of-type(1) {
+                margin-left: 1em;
+                border-bottom: 1px solid $fontL;
+                th {
+                    text-align: left;
+                    font-size: 13px;
+                    color: $fontL;
+                }
+            }
+
+            tr:not(:first-child) {
+                td {
+                    color: $fontL;
+                }
+            }
+        }
+    }
+}

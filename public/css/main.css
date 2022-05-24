@@ -154,4 +154,37 @@ aside .options .activo i {
   max-height: 45vh;
 }
 
+.dashboard {
+  height: 100%;
+}
+.dashboard .employees {
+  width: 100%;
+  background: white;
+  max-height: 100%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 2em;
+  padding: 1.5em;
+}
+.dashboard .employees .title {
+  font-weight: bold;
+  font-size: 20px;
+}
+.dashboard .employees .table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1em;
+}
+.dashboard .employees .table tr:nth-of-type(1) {
+  margin-left: 1em;
+  border-bottom: 1px solid #b9c1cf;
+}
+.dashboard .employees .table tr:nth-of-type(1) th {
+  text-align: left;
+  font-size: 13px;
+  color: #b9c1cf;
+}
+.dashboard .employees .table tr:not(:first-child) td {
+  color: #b9c1cf;
+}
+
 /*# sourceMappingURL=main.css.map */
