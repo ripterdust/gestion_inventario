@@ -7,8 +7,42 @@
     <div class="metric">
         <div class="text">
             <div class="title">Ganancias de hoy</div>
-            <div class="number">Numero</div>
+            <div class="number">
+                Q.100.00
+            </div>
         </div>
+
+        <div class="icon"><i class="fa-solid fa-sack-dollar"></i></div>
+    </div>
+    <div class="metric">
+        <div class="text">
+            <div class="title">Ganancias de hoy</div>
+            <div class="number">
+                Q.100.00
+            </div>
+        </div>
+
+        <div class="icon"><i class="fa-solid fa-sack-dollar"></i></div>
+    </div>
+    <div class="metric">
+        <div class="text">
+            <div class="title">Ganancias de hoy</div>
+            <div class="number">
+                Q.100.00
+            </div>
+        </div>
+
+        <div class="icon"><i class="fa-solid fa-sack-dollar"></i></div>
+    </div>
+    <div class="metric">
+        <div class="text">
+            <div class="title">Ganancias de hoy</div>
+            <div class="number">
+                Q.100.00
+            </div>
+        </div>
+
+        <div class="icon"><i class="fa-solid fa-sack-dollar"></i></div>
     </div>
 </div>
 
