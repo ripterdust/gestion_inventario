@@ -49,11 +49,10 @@
 
         <a href="{{route('login.out')}}" class="out">Cerrar Sesión</a>
     </div>
+    
+    <!-- Document body -->
+    @yield('content')
 </div>
 
-<!-- Document body -->
-@yield('content')
-  
-  
 </body>
 </html>
