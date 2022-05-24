@@ -147,5 +147,8 @@ aside .options .activo i {
   font-size: 15px;
   font-weight: bold;
 }
+.dashboard .chart .chartCanvas {
+  max-height: 45vh;
+}
 
 /*# sourceMappingURL=main.css.map */
