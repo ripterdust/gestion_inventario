@@ -6,23 +6,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('css/main.css') }}" />
     <title>@yield('title')</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-<nav>
 
-    <a href="{{route('home')}}" class="name">
-        Software AT
-    </a>
-
-    <div class="content">
-        <div class="user">
-            {{ session()->get('name') }}
-        </div>
+<aside>
+    <div class="titulo">
+        <i class="fa-solid fa-store"></i>
+        <span>Dashboard</span>
     </div>
-</nav>
-    
+
+    <div class="options">
+        <a href="{{route('home')}}" class="option">
+            <i class="fa-solid fa-house"></i>
+            <span>Inicio</span>
+        </a>
+        <a href="" class="option">
+            <i class="fa-solid fa-users"></i>
+            <span>Clientes</span>
+        </a>
+        <a href="" class="option">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span>Proveedores</span>
+        </a>
+
+        <a href="" class="option">
+            <i class="fa-solid fa-box"></i>
+            <span>Productos</span>
+        </a>
+        <a href="" class="option">
+            <i class="fa-solid fa-money-bill-trend-up"></i>
+            <span>Ventas</span>
+        </a>
+    </div>
+</aside>
+
+<div class="dashboard">
+    <div class="nav">
+        <div class="name">
+            {{ auth()->user()->name }}
+        </div>
+
+        <a href="{{route('login.out')}}" class="aut">Cerrar Sesión</a>
+    </div>
+</div>
 
 <!-- Document body -->
-  @yield('content')
+@yield('content')
+  
+  
 </body>
 </html>
