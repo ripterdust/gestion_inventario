@@ -25,20 +25,20 @@
             <i class="fa-solid fa-people-carry-box"></i>
             <span>Empleados</span>
         </a>
-        <a href="" class="option">
+        <a href="/prueba" class="option">
             <i class="fa-solid fa-users"></i>
             <span>Clientes</span>
         </a>
-        <a href="" class="option">
+        <a href="/prueba" class="option">
             <i class="fa-solid fa-bag-shopping"></i>
             <span>Proveedores</span>
         </a>
 
-        <a href="" class="option">
+        <a href="/prueba" class="option">
             <i class="fa-solid fa-box"></i>
             <span>Productos</span>
         </a>
-        <a href="" class="option">
+        <a href="/prueba" class="option">
             <i class="fa-solid fa-money-bill-trend-up"></i>
             <span>Ventas</span>
         </a>
