@@ -17,7 +17,7 @@
     </div>
 
     <div class="options">
-        <a href="{{route('home')}}" class="option activo">
+        <a href="{{route('home')}}" class="option">
             <i class="fa-solid fa-house"></i>
             <span>Inicio</span>
         </a>
@@ -57,6 +57,7 @@
     
     <!-- Document body -->
     @yield('content')
+    <script src="{{asset('js/activeNavLink.js')}}"></script>
 </div>
 
 </body>

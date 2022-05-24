@@ -28,7 +28,7 @@ use App\Http\Controllers\RegisterController;
 
 // **** Admin panel
 // Dashboard
-Route::get('/', [DashboardController::class, 'index'])
+Route::get('/dashboard', [DashboardController::class, 'index'])
     ->middleware('auth')
     ->name('home');
 
