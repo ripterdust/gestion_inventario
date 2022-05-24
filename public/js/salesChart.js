@@ -1,7 +1,7 @@
 const ctx = document.querySelector("#salesChart").getContext("2d");
 
 const salesChart = new Chart(ctx, {
-    type: "bar",
+    type: "line",
     data: {
         labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
         datasets: [
