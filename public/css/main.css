@@ -73,7 +73,7 @@ aside .options .activo {
   background: white;
   border-radius: 1em;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  transition: 0.3s ease-in-out;
+  transition: 0.1s ease-in-out;
 }
 aside .options .activo i {
   box-shadow: none;
