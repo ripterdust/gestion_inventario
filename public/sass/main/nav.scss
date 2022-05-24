@@ -1,0 +1,27 @@
+.dashboard {
+    .nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .name,
+        .out {
+            padding: 0.5em 1em;
+            border-radius: 1em;
+            box-shadow: $boxShadow;
+        }
+        .name {
+            background: white;
+            cursor: pointer;
+        }
+
+        .out {
+            background-image: $gradient;
+            color: white;
+            &:active {
+                transform: scale(0.98);
+            }
+        }
+    }
+}

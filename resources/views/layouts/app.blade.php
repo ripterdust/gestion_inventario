@@ -47,7 +47,7 @@
             {{ auth()->user()->name }}
         </div>
 
-        <a href="{{route('login.out')}}" class="aut">Cerrar Sesión</a>
+        <a href="{{route('login.out')}}" class="out">Cerrar Sesión</a>
     </div>
 </div>
 
