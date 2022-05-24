@@ -6,7 +6,7 @@
 <div>
     <h1>lOGIN</h1>
 
-    <form method="POST" action=" {{route('login.store')}} " class="mt-4">
+    <form method="POST" action=" {{route('login.store')}} " class="authForm">
         @csrf
 
         @error('message')
