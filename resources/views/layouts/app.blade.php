@@ -8,7 +8,17 @@
     <title>@yield('title')</title>
 </head>
 <body>
-<nav class="navbar">
+<nav>
+
+    <a href="{{route('home')}}" class="name">
+        Software AT
+    </a>
+
+    <div class="content">
+        <div class="user">
+            {{ session()->get('name') }}
+        </div>
+    </div>
 </nav>
     
 
