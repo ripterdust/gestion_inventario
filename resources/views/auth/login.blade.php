@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.auth')
 @section('title', 'Login')
 
 @section('content')
@@ -10,7 +10,7 @@
         @csrf
 
         @error('message')
-            {{ message }}
+            <div class="error"></div>
         @enderror
         <input type="email" name="email" />
         <input type="password" name="password" />
