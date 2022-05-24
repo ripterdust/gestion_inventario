@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+
+//  Variables
 @import "./auth/variables.scss";
 
 * {
@@ -11,4 +14,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    font-family: "Poppins", sans-serif;
+    background: $blue;
 }
+
+// Form styles
+@import "./auth/form.scss";

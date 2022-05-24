@@ -3,7 +3,7 @@
 
 @section('content')
 
-    <h1>lOGIN</h1>
+    <h1>Iniciar sesión</h1>
 
     <form method="POST" action=" {{route('login.store')}} " class="authForm">
         @csrf
