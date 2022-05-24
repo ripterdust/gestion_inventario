@@ -3,7 +3,6 @@
 
 @section('content')
 
-<div>
     <h1>lOGIN</h1>
 
     <form method="POST" action=" {{route('login.store')}} " class="authForm">
@@ -29,5 +28,4 @@
 
         <input type="submit" value="Login" />
     </form>
-</div>
 @endsection

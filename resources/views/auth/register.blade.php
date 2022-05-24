@@ -3,7 +3,6 @@
 
 @section('content')
 
-<div>
     <h1>Registrarse</h1>
 
     <form method="POST" action=" {{route('register.store')}} " class="authForm">
@@ -39,5 +38,4 @@
         <input type="password" name="password_confirmation" />
         <input type="submit" value="Registrarse">
     </form>
-</div>
 @endsection
