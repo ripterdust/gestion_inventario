@@ -22,6 +22,6 @@ Route::get('/', function () {
 // Authentication
 
 // Login
-Route::get('/login', [SessionsController::class, 'index'])
-    ->middleware('auth')
+Route::get('/login', [SessionsController::class, 'create'])
+    ->middleware('guest')
     ->name('login');
