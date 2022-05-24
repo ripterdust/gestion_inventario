@@ -51,4 +51,6 @@
     <div class="title">Ventas del último mes.</div>
 </div>
 
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
 @endsection
