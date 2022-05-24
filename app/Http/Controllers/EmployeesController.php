@@ -12,7 +12,10 @@ class EmployeesController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
+    {   
+
+        
+
         return view('dashboard.employees');
     }
 
