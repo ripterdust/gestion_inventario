@@ -24,9 +24,9 @@ class EmployeesController extends Controller
 
         $employees = array();
 
-        for($i = 0; $i<= 10; $i++){
+        for($i = 0; $i<= 5; $i++){
             $employee = new Employee;
-            $employee->name = 'Bryan';
+            $employee->name = 'Bryan Arévalo';
             $employee->mail = 'bryantello2010@hotmail.com';
             $employee->position = 'Fullstack developer';
             $employee->department = 'Development';

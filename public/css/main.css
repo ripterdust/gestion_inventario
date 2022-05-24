@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -185,6 +185,21 @@ aside .options .activo i {
 }
 .dashboard .employees .table tr:not(:first-child) td {
   color: #b9c1cf;
+  padding: 0.5em;
+  font-size: 12px;
+}
+.dashboard .employees .table tr:not(:first-child) td .name {
+  font-size: 15px;
+}
+.dashboard .employees .table tr:not(:first-child) td .mail {
+  color: #677fa4;
+}
+.dashboard .employees .table tr:not(:first-child) td .date {
+  color: #677fa4;
+  font-size: 14px;
+}
+.dashboard .employees .table tr:not(:first-child) td .department {
+  color: #677fa4;
 }
 
 /*# sourceMappingURL=main.css.map */

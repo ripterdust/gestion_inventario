@@ -30,6 +30,25 @@
             tr:not(:first-child) {
                 td {
                     color: $fontL;
+                    padding: 0.5em;
+                    font-size: 12px;
+
+                    .name {
+                        font-size: 15px;
+                    }
+
+                    .mail {
+                        color: $lFontColor;
+                    }
+
+                    .date {
+                        color: $lFontColor;
+                        font-size: 14px;
+                    }
+
+                    .department {
+                        color: $lFontColor;
+                    }
                 }
             }
         }

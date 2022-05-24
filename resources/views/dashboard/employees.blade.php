@@ -40,13 +40,8 @@
                         </div>
                     </td>
                     <td>
-                        
                         <a href="" class="action">
                             <i class="fa-solid fa-user-pen"></i>
-                        </a>
-
-                        <a href="" class="action">
-                            <i class="fa-solid fa-trash"></i>
                         </a>
                     </td>
                 </tr>
