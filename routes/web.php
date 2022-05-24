@@ -9,6 +9,8 @@ use App\Http\Controllers\DashboardController;
 // Login
 use App\Http\Controllers\SessionsController;
 
+// Register
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,8 +24,9 @@ use App\Http\Controllers\SessionsController;
 */
 
 // Dashboard
-Route::get('/', [DashboardController::class, 'index']);
-
+Route::get('/', [DashboardController::class, 'index'])
+    ->middleware('auth')
+    ->name('home');
 
 // Authentication
 
@@ -31,3 +34,9 @@ Route::get('/', [DashboardController::class, 'index']);
 Route::get('/login', [SessionsController::class, 'create'])
     ->middleware('guest')
     ->name('login');
+
+
+// Register
+Route::get('/register', [RegisterController::class, 'create'])
+    ->middleware('guest')
+    ->name('register');
