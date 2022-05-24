@@ -96,6 +96,7 @@ aside .options .activo i {
 .dashboard .nav .name {
   background: white;
   cursor: pointer;
+  font-weight: bold;
 }
 .dashboard .nav .out {
   background-image: linear-gradient(310deg, #7928ca, #ff0080);
