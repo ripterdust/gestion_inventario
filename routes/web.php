@@ -35,7 +35,8 @@ Route::get('/login', [SessionsController::class, 'create'])
     ->middleware('guest')
     ->name('login');
 
-Route::post('/login', [SessionsController::class], 'store')
+Route::post('/login', [SessionsController::class, 'store'])
+    ->middleware('guest')
     ->name('login.store');
 
 // Register
