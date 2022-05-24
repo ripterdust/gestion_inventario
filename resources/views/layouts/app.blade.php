@@ -11,6 +11,8 @@
 
 <nav>
     Barra navegación
+
+    <a href="{{ route('login.out') }}">Salir</a>
 </nav>
     
 

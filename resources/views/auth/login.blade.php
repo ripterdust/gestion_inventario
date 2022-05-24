@@ -2,8 +2,8 @@
 @section('title', 'Login')
 
 @section('content')
-
-    <h1>Iniciar sesión</h1>
+<div class="form-container">
+    <h1 class="title">Iniciar sesión</h1>
 
     <form method="POST" action=" {{route('login.store')}} " class="authForm">
         @csrf
@@ -28,4 +28,5 @@
 
         <input type="submit" value="Login" />
     </form>
+</div>
 @endsection

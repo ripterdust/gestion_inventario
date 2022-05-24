@@ -12,10 +12,28 @@ body {
   align-items: center;
   flex-direction: column;
   font-family: "Poppins", sans-serif;
-  background: #63cdda;
+  background: #ecf0f1;
 }
 
-.authForm {
+.form-container {
+  background: white;
+  border-radius: 2em;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+.form-container .title {
+  width: 30vw;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+.form-container .authForm {
   display: flex;
   justify-content: center;
   align-items: center;
