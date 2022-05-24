@@ -49,6 +49,7 @@
 
 <div class="chart">
     <div class="title">Ventas del último mes.</div>
+    <canvas id="salesChart"  height="400"></canvas>
 </div>
 
 
