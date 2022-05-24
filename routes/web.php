@@ -6,6 +6,9 @@ use Illuminate\Support\Facades\Route;
 // Dashboard
 use App\Http\Controllers\DashboardController;
 
+// Employees 
+use App\Http\Controllers\EmployeesController;
+
 // Login
 use App\Http\Controllers\SessionsController;
 
@@ -23,12 +26,19 @@ use App\Http\Controllers\RegisterController;
 |
 */
 
+// **** Admin panel
 // Dashboard
 Route::get('/', [DashboardController::class, 'index'])
     ->middleware('auth')
     ->name('home');
 
-// Authentication
+
+// Employees
+Route::get('/employees', [EmployeesController::class, 'index'])
+    ->middleware('auth')
+    ->name('home');
+
+// ******* Authentication
 
 // Login
 Route::get('/login', [SessionsController::class, 'create'])

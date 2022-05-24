@@ -21,7 +21,7 @@
             <i class="fa-solid fa-house"></i>
             <span>Inicio</span>
         </a>
-        <a href="" class="option">
+        <a href="{{route('employees')}}" class="option">
             <i class="fa-solid fa-people-carry-box"></i>
             <span>Empleados</span>
         </a>
