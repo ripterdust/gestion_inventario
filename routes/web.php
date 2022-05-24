@@ -1,7 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+// My controllers
+
+// Dashboard
+use App\Http\Controllers\DashboardController;
+
+// Login
 use App\Http\Controllers\SessionsController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,9 +21,8 @@ use App\Http\Controllers\SessionsController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+// Dashboard
+Route::get('/', [DashboardController::class, 'index']);
 
 
 // Authentication
