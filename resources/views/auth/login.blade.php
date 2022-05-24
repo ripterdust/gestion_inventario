@@ -10,7 +10,17 @@
         @csrf
 
         @error('message')
-            <div class="error"></div>
+            <div class="error">Correo o contraseña inválidos o inexistentes</div>
+        @enderror
+        @error('email')
+            <div class="error">
+                {{ $message }}
+            </div>
+        @enderror
+        @error('password')
+            <div class="error">
+                {{ $message }}
+            </div>
         @enderror
         <input type="email" name="email" />
         <input type="password" name="password" />
