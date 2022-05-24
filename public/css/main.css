@@ -73,11 +73,13 @@ aside .options .activo {
   background: white;
   border-radius: 1em;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transition: 0.3s ease-in-out;
 }
 aside .options .activo i {
   box-shadow: none;
   background-image: linear-gradient(310deg, #7928ca, #ff0080);
   color: white;
+  transition: 0.3s ease-in-out;
 }
 
 .dashboard .nav {
