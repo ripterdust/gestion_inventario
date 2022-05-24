@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+
+// Importing model
+use App\Models\User;
+
 class RegisterController extends Controller
 {
     /**
@@ -34,7 +38,27 @@ class RegisterController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            "email" => 'required|unique:users,email',
+            'password' => 'required|min:5',
+            'password_confirmation' => 'required|same:password',
+            'name' => 'required'
+        ]);
+
+        // Creating the model
+        $user = new User;
+        $user->email = $request->email;
+        $user->password = $request->password;
+        $user -> name = $request->name;
+
+        // Saving
+        $user->save();
+
+        // Creating the session
+        auth()->login($user);
+
+        return redirect()->route('home');
+
     }
 
     /**
