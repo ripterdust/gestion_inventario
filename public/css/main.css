@@ -30,6 +30,8 @@ aside {
   display: flex;
   flex-direction: column;
   height: 100%;
+  position: sticky;
+  top: 0;
 }
 aside .title {
   padding: 1em 0;
@@ -39,6 +41,7 @@ aside .title {
   height: 4em;
   font-size: 18px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  font-weight: bold;
 }
 aside .title i {
   margin-right: 0.5em;
