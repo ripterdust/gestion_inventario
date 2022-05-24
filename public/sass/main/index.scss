@@ -1,0 +1,36 @@
+.dashboard {
+    .metrics {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 1em;
+
+        .metric {
+            background: white;
+            padding: 1em;
+            border-radius: 1em;
+            box-shadow: $boxShadow;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            .text {
+                .title {
+                    font-size: 14px;
+                    color: $lFontColor;
+                    font-weight: 400;
+                }
+                .number {
+                    font-weight: bold;
+                    font-size: 17px;
+                }
+            }
+
+            i {
+                background-image: $gradient;
+                padding: 0.7em;
+                border-radius: 0.5em;
+                color: white;
+            }
+        }
+    }
+}
