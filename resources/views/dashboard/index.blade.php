@@ -12,33 +12,33 @@
             </div>
         </div>
 
-        <div class="icon"><i class="fa-solid fa-sack-dollar"></i></div>
+        <div class="icon"><i class="fa-solid fa-coins"></i></div>
     </div>
     <div class="metric">
         <div class="text">
-            <div class="title">Ganancias de hoy</div>
+            <div class="title">Clientes mes</div>
             <div class="number">
-                Q.100.00
+                80
             </div>
         </div>
 
-        <div class="icon"><i class="fa-solid fa-sack-dollar"></i></div>
+        <div class="icon"><i class="fa-solid fa-users"></i></div>
     </div>
     <div class="metric">
         <div class="text">
-            <div class="title">Ganancias de hoy</div>
+            <div class="title">Total productos</div>
             <div class="number">
-                Q.100.00
+                25
             </div>
         </div>
 
-        <div class="icon"><i class="fa-solid fa-sack-dollar"></i></div>
+        <div class="icon"><i class="fa-solid fa-boxes-stacked"></i></div>
     </div>
     <div class="metric">
         <div class="text">
-            <div class="title">Ganancias de hoy</div>
+            <div class="title">Ganancias del mes</div>
             <div class="number">
-                Q.100.00
+                Q.3425.45
             </div>
         </div>
 
