@@ -3,6 +3,7 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         column-gap: 1em;
+        margin-bottom: 1em;
 
         .metric {
             background: white;
@@ -31,6 +32,19 @@
                 border-radius: 0.5em;
                 color: white;
             }
+        }
+    }
+
+    .chart {
+        width: 100%;
+        box-shadow: $boxShadow;
+        background: white;
+        border-radius: 1em;
+        padding: 1.5em;
+
+        .title {
+            font-size: 18px;
+            font-weight: bold;
         }
     }
 }

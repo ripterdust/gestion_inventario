@@ -48,7 +48,7 @@
 
 
 <div class="chart">
-    
+    <div class="title">Ventas del último mes.</div>
 </div>
 
 @endsection

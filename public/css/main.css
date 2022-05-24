@@ -110,6 +110,7 @@ aside .options .activo i {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 1em;
+  margin-bottom: 1em;
 }
 .dashboard .metrics .metric {
   background: white;
@@ -134,6 +135,17 @@ aside .options .activo i {
   padding: 0.7em;
   border-radius: 0.5em;
   color: white;
+}
+.dashboard .chart {
+  width: 100%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background: white;
+  border-radius: 1em;
+  padding: 1.5em;
+}
+.dashboard .chart .title {
+  font-size: 18px;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=main.css.map */
