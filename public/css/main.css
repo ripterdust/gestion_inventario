@@ -1,3 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #344767;
+}
 
+body {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  column-gap: 1em;
+}
+
+a {
+  text-decoration: none;
+  color: #344767;
+}
 
 /*# sourceMappingURL=main.css.map */
