@@ -8,11 +8,7 @@
     <title>@yield('title')</title>
 </head>
 <body>
-
-<nav>
-    Barra navegación
-
-    <a href="{{ route('login.out') }}">Salir</a>
+<nav class="navbar">
 </nav>
     
 
