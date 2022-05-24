@@ -22,6 +22,10 @@
             <span>Inicio</span>
         </a>
         <a href="" class="option">
+            <i class="fa-solid fa-people-carry-box"></i>
+            <span>Empleados</span>
+        </a>
+        <a href="" class="option">
             <i class="fa-solid fa-users"></i>
             <span>Clientes</span>
         </a>
@@ -38,6 +42,7 @@
             <i class="fa-solid fa-money-bill-trend-up"></i>
             <span>Ventas</span>
         </a>
+        
     </div>
 </aside>
 
