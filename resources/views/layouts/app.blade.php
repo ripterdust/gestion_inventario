@@ -11,13 +11,13 @@
 <body>
 
 <aside>
-    <div class="titulo">
+    <div class="title">
         <i class="fa-solid fa-store"></i>
         <span>Dashboard</span>
     </div>
 
     <div class="options">
-        <a href="{{route('home')}}" class="option">
+        <a href="{{route('home')}}" class="option activo">
             <i class="fa-solid fa-house"></i>
             <span>Inicio</span>
         </a>

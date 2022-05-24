@@ -3,12 +3,16 @@
     padding: 0;
     box-sizing: border-box;
     color: $fontColor;
+    font-family: "Poppins", sans-serif;
 }
 
 body {
     display: grid;
     grid-template-columns: 1fr 4fr;
     column-gap: 1em;
+    padding: 1em 1.5em;
+    background: $bg;
+    height: 100vh;
 }
 
 a {

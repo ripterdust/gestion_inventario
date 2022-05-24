@@ -1,0 +1,57 @@
+aside {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    .title {
+        padding: 1em 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 4em;
+        font-size: 18px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+
+        i {
+            margin-right: 0.5em;
+            font-size: 25px;
+        }
+    }
+
+    .options {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        margin-top: 1em;
+
+        .option {
+            width: 95%;
+            display: flex;
+            align-items: center;
+            padding: 0.5em 1em;
+            margin-bottom: 0.5em;
+
+            i {
+                margin-right: 0.5em;
+                background: white;
+                padding: 1em;
+                border-radius: 8px;
+                font-size: 13px;
+                box-shadow: $boxShadow;
+            }
+        }
+
+        .activo {
+            background: white;
+            border-radius: 1em;
+            box-shadow: $boxShadow;
+
+            i {
+                box-shadow: none;
+                background-image: $gradient;
+                color: white;
+            }
+        }
+    }
+}
