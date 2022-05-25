@@ -3,7 +3,7 @@
 @section('title', 'Employees')
 
 @section('content')
-    <div class="table_list employees">
+    <div class="table_list employees box">
         <div class="title">Empleados</div>
 
         <table class="table">

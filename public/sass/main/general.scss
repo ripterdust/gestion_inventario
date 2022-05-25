@@ -22,18 +22,24 @@ a {
 
 .dashboard {
     padding: 1em;
-    .table_list {
+
+    // white box bg
+    .box {
         width: 100%;
         background: white;
         max-height: 100%;
         box-shadow: $boxShadow;
         border-radius: 2em;
         padding: 1.5em;
+
         .title {
             font-weight: bold;
             font-size: 20px;
         }
+    }
 
+    // Vista de tabla
+    .table_list {
         .table {
             width: 100%;
             border-collapse: collapse;
@@ -65,16 +71,24 @@ a {
                 }
 
                 td {
-                    color: $fontL;
-                    padding: 0.5em;
-                    font-size: 12px;
+                    color: $fontColor;
+                    padding: 1em;
+
+                    .ltext {
+                        color: $fontL;
+                    }
 
                     .table_text {
                         color: $lFontColor;
                     }
                     .action {
-                        padding: 1em;
+                        padding: 0.5em 1em;
                         border-radius: 1em;
+                        cursor: pointer;
+                    }
+
+                    i {
+                        font-size: 13px;
                     }
                 }
             }

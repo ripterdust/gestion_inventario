@@ -24,7 +24,7 @@ a {
 .dashboard {
   padding: 1em;
 }
-.dashboard .table_list {
+.dashboard .box {
   width: 100%;
   background: white;
   max-height: 100%;
@@ -32,7 +32,7 @@ a {
   border-radius: 2em;
   padding: 1.5em;
 }
-.dashboard .table_list .title {
+.dashboard .box .title {
   font-weight: bold;
   font-size: 20px;
 }
@@ -61,16 +61,22 @@ a {
   color: white;
 }
 .dashboard .table_list .table tr:not(:first-child) td {
+  color: #344767;
+  padding: 1em;
+}
+.dashboard .table_list .table tr:not(:first-child) td .ltext {
   color: #b9c1cf;
-  padding: 0.5em;
-  font-size: 12px;
 }
 .dashboard .table_list .table tr:not(:first-child) td .table_text {
   color: #677fa4;
 }
 .dashboard .table_list .table tr:not(:first-child) td .action {
-  padding: 1em;
+  padding: 0.5em 1em;
   border-radius: 1em;
+  cursor: pointer;
+}
+.dashboard .table_list .table tr:not(:first-child) td i {
+  font-size: 13px;
 }
 
 aside {
