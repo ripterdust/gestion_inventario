@@ -38,6 +38,9 @@ Route::get('/tests', [TestController::class, 'index'])
     ->middleware('auth')
     ->name('tests');
 
+Route::get('/test/new', [TestController::class, 'create'])
+    ->middleware('auth')
+    ->name('test.new');
 
 // Cientes
 Route::get('/clients', [ClientController::class, 'index'])
