@@ -30,7 +30,7 @@
             <i class="fa-solid fa-people-carry-box"></i>
             <span>Empleados</span>
         </a>
-        <a href="/prueba" class="option">
+        <a href="{{ route('clients') }}" class="option">
             <i class="fa-solid fa-users"></i>
             <span>Cliente</span>
         </a>

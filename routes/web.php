@@ -18,6 +18,9 @@ use App\Http\Controllers\RegisterController;
 // Tests
 use App\Http\Controllers\TestController;
 
+// Clientes
+use App\Http\Controllers\ClientController;
+
 // **** Admin panel
 // Dashboard
 Route::get('/dashboard', [DashboardController::class, 'index'])
@@ -35,6 +38,11 @@ Route::get('/tests', [TestController::class, 'index'])
     ->middleware('auth')
     ->name('tests');
 
+
+// Cientes
+Route::get('/clients', [ClientController::class, 'index'])
+    ->middleware('auth')
+    ->name('clients');
 
 // ******* Authentication
 
