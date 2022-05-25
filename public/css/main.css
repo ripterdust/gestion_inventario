@@ -24,6 +24,37 @@ a {
 .dashboard {
   padding: 1em;
 }
+.dashboard .metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 1em;
+  margin-bottom: 1em;
+}
+.dashboard .metrics .metric {
+  background: white;
+  padding: 1em;
+  border-radius: 1em;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.dashboard .metrics .metric .text .title {
+  font-size: 14px;
+  color: #677fa4;
+  font-weight: 400;
+}
+.dashboard .metrics .metric .text .number {
+  font-weight: bold;
+  font-size: 17px;
+}
+.dashboard .metrics .metric i {
+  background-image: linear-gradient(310deg, #7928ca, #ff0080);
+  padding: 0.7em;
+  border-radius: 0.5em;
+  color: white;
+  font-size: 18px;
+}
 .dashboard .box {
   width: 100%;
   background: white;
@@ -162,37 +193,6 @@ aside .options .activo i {
   transform: scale(0.98);
 }
 
-.dashboard .metrics {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  column-gap: 1em;
-  margin-bottom: 1em;
-}
-.dashboard .metrics .metric {
-  background: white;
-  padding: 1em;
-  border-radius: 1em;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-.dashboard .metrics .metric .text .title {
-  font-size: 14px;
-  color: #677fa4;
-  font-weight: 400;
-}
-.dashboard .metrics .metric .text .number {
-  font-weight: bold;
-  font-size: 17px;
-}
-.dashboard .metrics .metric i {
-  background-image: linear-gradient(310deg, #7928ca, #ff0080);
-  padding: 0.7em;
-  border-radius: 0.5em;
-  color: white;
-  font-size: 18px;
-}
 .dashboard .chart {
   width: 100%;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
