@@ -26,13 +26,13 @@
     </div>
     <div class="metric">
         <div class="text">
-            <div class="title">Total productos</div>
+            <div class="title">Total examenes</div>
             <div class="number">
                 25
             </div>
         </div>
 
-        <div class="icon"><i class="fa-solid fa-boxes-stacked"></i></div>
+        <div class="icon"><i class="fa-solid fa-flask-vial"></i></div>
     </div>
     <div class="metric">
         <div class="text">
