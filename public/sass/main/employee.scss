@@ -1,74 +1,20 @@
-.dashboard {
-    height: 100%;
-    .employees {
-        width: 100%;
-        background: white;
-        max-height: 100%;
-        box-shadow: $boxShadow;
-        border-radius: 2em;
-        padding: 1.5em;
-        .title {
-            font-weight: bold;
-            font-size: 20px;
-        }
-
-        .table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 1em;
-
-            tr:nth-of-type(1) {
-                margin-left: 1em;
-                border-bottom: 1px solid $fontL;
-                th {
-                    text-align: left;
-                    font-size: 13px;
-                    color: $fontL;
-                }
+.employees {
+    .table {
+        td {
+            .name {
+                font-size: 15px;
             }
 
-            tr:not(:first-child) {
-                &:hover {
-                    box-shadow: $boxShadow;
-                    border-radius: 0.5em;
+            .mail {
+                color: $lFontColor;
+            }
 
-                    td {
-                        .action {
-                            background-image: $gradient;
-                            i {
-                                color: white;
-                            }
-                        }
-                    }
-                }
+            .date {
+                font-size: 14px;
+            }
 
-                td {
-                    color: $fontL;
-                    padding: 0.5em;
-                    font-size: 12px;
-
-                    .name {
-                        font-size: 15px;
-                    }
-
-                    .mail {
-                        color: $lFontColor;
-                    }
-
-                    .date {
-                        color: $lFontColor;
-                        font-size: 14px;
-                    }
-
-                    .department {
-                        color: $lFontColor;
-                    }
-
-                    .action {
-                        padding: 1em;
-                        border-radius: 1em;
-                    }
-                }
+            .department {
+                color: $lFontColor;
             }
         }
     }

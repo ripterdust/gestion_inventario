@@ -22,4 +22,62 @@ a {
 
 .dashboard {
     padding: 1em;
+    .table_list {
+        width: 100%;
+        background: white;
+        max-height: 100%;
+        box-shadow: $boxShadow;
+        border-radius: 2em;
+        padding: 1.5em;
+        .title {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1em;
+
+            tr:nth-of-type(1) {
+                margin-left: 1em;
+                border-bottom: 1px solid $fontL;
+                th {
+                    text-align: left;
+                    font-size: 13px;
+                    color: $fontL;
+                }
+            }
+
+            tr:not(:first-child) {
+                &:hover {
+                    box-shadow: $boxShadow;
+                    border-radius: 0.5em;
+
+                    td {
+                        .action {
+                            background-image: $gradient;
+                            i {
+                                color: white;
+                            }
+                        }
+                    }
+                }
+
+                td {
+                    color: $fontL;
+                    padding: 0.5em;
+                    font-size: 12px;
+
+                    .table_text {
+                        color: $lFontColor;
+                    }
+                    .action {
+                        padding: 1em;
+                        border-radius: 1em;
+                    }
+                }
+            }
+        }
+    }
 }
