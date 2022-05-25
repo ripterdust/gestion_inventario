@@ -183,6 +183,16 @@ aside .options .activo i {
   font-size: 13px;
   color: #b9c1cf;
 }
+.dashboard .employees .table tr:not(:first-child):hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 0.5em;
+}
+.dashboard .employees .table tr:not(:first-child):hover td .action {
+  background-image: linear-gradient(310deg, #7928ca, #ff0080);
+}
+.dashboard .employees .table tr:not(:first-child):hover td .action i {
+  color: white;
+}
 .dashboard .employees .table tr:not(:first-child) td {
   color: #b9c1cf;
   padding: 0.5em;
@@ -200,6 +210,10 @@ aside .options .activo i {
 }
 .dashboard .employees .table tr:not(:first-child) td .department {
   color: #677fa4;
+}
+.dashboard .employees .table tr:not(:first-child) td .action {
+  padding: 1em;
+  border-radius: 1em;
 }
 
 /*# sourceMappingURL=main.css.map */
