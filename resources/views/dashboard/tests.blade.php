@@ -38,7 +38,7 @@
                 <td>Proceso</td>
                 <td>
                     <a class="action">
-                        <i class="fa-solid fa-eye"></i>
+                        <i class="fa-solid fa-vial"></i>
                     </a>
                 </td>
             </tr>
