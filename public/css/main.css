@@ -21,6 +21,19 @@ a {
   color: #344767;
 }
 
+.box {
+  width: 100%;
+  background: white;
+  max-height: 100%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 2em;
+  padding: 1.5em;
+}
+.box .title {
+  font-weight: bold;
+  font-size: 20px;
+}
+
 .dashboard {
   padding: 1em;
 }
@@ -54,18 +67,6 @@ a {
   border-radius: 0.5em;
   color: white;
   font-size: 18px;
-}
-.dashboard .box {
-  width: 100%;
-  background: white;
-  max-height: 100%;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  border-radius: 2em;
-  padding: 1.5em;
-}
-.dashboard .box .title {
-  font-weight: bold;
-  font-size: 20px;
 }
 .dashboard .table_list .table {
   width: 100%;
@@ -108,6 +109,10 @@ a {
 }
 .dashboard .table_list .table tr:not(:first-child) td i {
   font-size: 13px;
+}
+
+.form .form-section {
+  background: white;
 }
 
 aside {

@@ -20,6 +20,20 @@ a {
     color: $fontColor;
 }
 
+// white box bg
+.box {
+    width: 100%;
+    background: white;
+    max-height: 100%;
+    box-shadow: $boxShadow;
+    border-radius: 2em;
+    padding: 1.5em;
+
+    .title {
+        font-weight: bold;
+        font-size: 20px;
+    }
+}
 .dashboard {
     padding: 1em;
 
@@ -58,21 +72,6 @@ a {
                 color: white;
                 font-size: 18px;
             }
-        }
-    }
-
-    // white box bg
-    .box {
-        width: 100%;
-        background: white;
-        max-height: 100%;
-        box-shadow: $boxShadow;
-        border-radius: 2em;
-        padding: 1.5em;
-
-        .title {
-            font-weight: bold;
-            font-size: 20px;
         }
     }
 
@@ -131,5 +130,11 @@ a {
                 }
             }
         }
+    }
+}
+
+.form {
+    .form-section {
+        background: white;
     }
 }
