@@ -32,13 +32,9 @@
         </a>
         <a href="/prueba" class="option">
             <i class="fa-solid fa-users"></i>
-            <span>Clientes</span>
+            <span>Cliente</span>
         </a>
         
-        <a href="/prueba" class="option">
-            <i class="fa-solid fa-box"></i>
-            <span>Productos</span>
-        </a>
         <a href="/prueba" class="option">
             <i class="fa-solid fa-money-bill-trend-up"></i>
             <span>Ventas</span>
