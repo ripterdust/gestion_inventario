@@ -18,7 +18,7 @@
     </div>
 
     <div class="table_list box">
-        <div class="title">Exámenes</div>
+        <div class="title title-with-btn">Exámenes <a href="/" class="button">Nuevo examen</a></div>
 
         <table class="table">
             <!-- Table title -->

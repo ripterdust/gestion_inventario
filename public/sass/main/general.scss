@@ -20,6 +20,19 @@ a {
     color: $fontColor;
 }
 
+// Button styles
+.button {
+    background-image: $gradient;
+    padding: 0.5em 1em;
+    color: white;
+    border-radius: 1em;
+    font-size: 15px;
+
+    &:active {
+        transform: scale(0.9);
+    }
+}
+
 // white box bg
 .box {
     width: 100%;
@@ -32,6 +45,12 @@ a {
     .title {
         font-weight: bold;
         font-size: 20px;
+    }
+
+    .title-with-btn {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
 }
 .dashboard {
