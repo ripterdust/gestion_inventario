@@ -15,16 +15,8 @@ use App\Http\Controllers\SessionsController;
 // Register
 use App\Http\Controllers\RegisterController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+// Tests
+use App\Http\Controllers\TestController;
 
 // **** Admin panel
 // Dashboard
@@ -37,6 +29,12 @@ Route::get('/dashboard', [DashboardController::class, 'index'])
 Route::get('/employees', [EmployeesController::class, 'index'])
     ->middleware('auth')
     ->name('employees');
+
+// Tests
+Route::get('/tests', [TestController::class, 'index'])
+    ->middleware('auth')
+    ->name('tests');
+
 
 // ******* Authentication
 

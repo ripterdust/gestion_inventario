@@ -21,7 +21,7 @@
             <i class="fa-solid fa-house"></i>
             <span>Inicio</span>
         </a>
-        <a href="/prueba" class="option">
+        <a href="{{ route('tests') }}" class="option">
             <i class="fa-solid fa-flask-vial"></i>
             <span>Examenes</span>
         </a>
