@@ -21,6 +21,11 @@
             <i class="fa-solid fa-house"></i>
             <span>Inicio</span>
         </a>
+        <a href="/prueba" class="option">
+            <i class="fa-solid fa-flask-vial"></i>
+            <span>Examenes</span>
+        </a>
+
         <a href="{{route('employees')}}" class="option">
             <i class="fa-solid fa-people-carry-box"></i>
             <span>Empleados</span>
@@ -29,11 +34,7 @@
             <i class="fa-solid fa-users"></i>
             <span>Clientes</span>
         </a>
-        <a href="/prueba" class="option">
-            <i class="fa-solid fa-bag-shopping"></i>
-            <span>Proveedores</span>
-        </a>
-
+        
         <a href="/prueba" class="option">
             <i class="fa-solid fa-box"></i>
             <span>Productos</span>
