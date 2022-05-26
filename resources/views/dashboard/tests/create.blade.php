@@ -17,13 +17,13 @@
                 </div>
             @enderror
             <div class="form-control">
-                <label for="Client">Nombre cliente:</label>
+                <label for="Client">Nombre paciente:</label>
                 <input type="text" name="client" id="clientAutocomplete" placeholder="Nombre" required/>
             </div>
 
             <div class="form-control">
                 <label for="test">Categoría:</label>
-                <select name="test" id="test">
+                <select name="category" id="test" required>
                     @foreach($categories as $category)
                         <option value="{{ $category->category }}">
                             {{ $category->category }}
@@ -34,7 +34,7 @@
 
             <div class="form-control">
                 <label for="test">Examen:</label>
-                <select name="laboratory" id="laboratory">
+                <select name="test" id="laboratory" required>
                     
                 </select>
                 
