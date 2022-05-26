@@ -32,11 +32,16 @@
                 </select>
             </div>
 
-            {{ $laboratories }}
+            
 
             <div class="form-submit">
                 <button type="submit" class="button">Nuevo examen</button>
             </div>
         </form>
     </div>
+
+    <script>
+        const laboratories = JSON.parse('{!! $laboratories !!}');
+    </script>
+    <script src="{{ asset('js/fixByCategory.js') }}"></script>
 @endsection
