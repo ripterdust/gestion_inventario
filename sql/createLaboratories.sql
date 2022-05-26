@@ -21,7 +21,7 @@ values('HEMATOLOGIA'),
 /* Exámenes de hematología */
 
 /* ('', '', '[]', '[]') */
-INSERT INTO laboratory(category, name, parameters, ranges)
+INSERT INTO laboratories(category, name, parameters, ranges)
 values 
 ('HEMATOLOGIA', 'HEMATOLOGIA COMPLETA 22/P ERITROSEDIMENTACION INCLUIDA', '[]', '[]'),
 ('HEMATOLOGIA', 'ERITROSEDIMENTACION', '[]', '[]'),
@@ -41,7 +41,12 @@ values
 ('HEMATOLOGIA', 'ELECTROFORESIS DE LIPOPROTEINAS', '[]', '[]');
 
 
-
-
-
-select * from categories;
+/* HEMOTASIS */
+INSERT INTO laboratories(category, name, parameters, ranges)
+values 
+('HEMOTASIS', 'TIEMPO DE PROTOMBINA (TP)', '[]', '[]'),
+('HEMOTASIS', 'TIEMPOPARCIAL DE TROMBOPLASTINA (PTP)', '[]', '[]'),
+('HEMOTASIS', 'INR', '[]', '[]'),
+('HEMOTASIS', 'TIEMPO DE COAGULACION', '[]', '[]'),
+('HEMOTASIS', 'TIEMPO DE SANGRIA', '[]', '[]'),
+('HEMOTASIS', 'FIBRIOGENO', '[]', '[]');
