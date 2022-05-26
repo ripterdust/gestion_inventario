@@ -4,6 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+// **** Models
+
+// Test
+use App\Models\Test;
+
 class DashboardController extends Controller
 {
     /**
@@ -13,7 +18,12 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('dashboard.index');
+        $tests = Test::orderByDesc('created_at')
+            ->count();
+
+        return view('dashboard.index', [
+            'tests' => $tests
+        ]);
     }
 
     /**

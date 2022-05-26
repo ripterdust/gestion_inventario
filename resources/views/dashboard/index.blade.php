@@ -28,7 +28,7 @@
         <div class="text">
             <div class="title">Total examenes</div>
             <div class="number">
-                25
+                {{ $tests }}
             </div>
         </div>
 
