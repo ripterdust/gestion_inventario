@@ -46,6 +46,7 @@ a {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   border-radius: 2em;
   padding: 1.5em;
+  max-width: 80vw;
 }
 .box .title {
   font-weight: bold;
@@ -142,8 +143,10 @@ a {
 
 .form {
   display: flex;
-  align-items: center;
   height: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  flex-direction: column;
 }
 .form .error {
   width: 100%;
@@ -159,6 +162,7 @@ a {
   padding: 1em;
   display: flex;
   flex-direction: column;
+  max-width: 100%;
 }
 .form .form-control label {
   color: #677fa4;
@@ -168,6 +172,7 @@ a {
   font-size: 16px;
   color: #344767;
   padding: 0.5em 1em;
+  max-width: 100%;
 }
 
 aside {
