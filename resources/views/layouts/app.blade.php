@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<aside>
+<aside class="sticky">
     <div class="title">
         <i class="fa-solid fa-store"></i>
         <span>Dashboard</span>

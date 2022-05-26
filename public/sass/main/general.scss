@@ -19,7 +19,10 @@ a {
     text-decoration: none;
     color: $fontColor;
 }
-
+.sticky {
+    position: sticky;
+    top: 0;
+}
 // Button styles
 .button {
     background-image: $gradient;
