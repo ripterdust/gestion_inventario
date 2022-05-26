@@ -34,10 +34,10 @@
 
             @foreach($tests as $test)
                 <tr>
-                    <td>{{ $test->CLIName }}</td>
-                    <td>{{ $test->TESTName }}</td>
-                    <td>{{ $test->created_at }}</td>
-                    <td>
+                    <td class="small_text">{{ $test->CLIName }}</td>
+                    <td class="small_text">{{ $test->TESTName }}</td>
+                    <td class="small_text">{{ $test->created_at }}</td>
+                    <td class="small_text">
                         @if ($test->state === 0)
                             Finalizado
                         @elseif($test->state == 1)
