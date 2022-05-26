@@ -16,13 +16,15 @@
     </div>
     <div class="metric">
         <div class="text">
-            <div class="title">Clientes mes</div>
+            <div class="title">Pacientes mes</div>
             <div class="number">
                 80
             </div>
         </div>
 
-        <div class="icon"><i class="fa-solid fa-users"></i></div>
+        <div class="icon">
+            <i class="fa-solid fa-hospital-user"></i>
+        </div>
     </div>
     <div class="metric">
         <div class="text">

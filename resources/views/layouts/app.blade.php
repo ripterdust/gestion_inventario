@@ -22,8 +22,8 @@
             <span>Inicio</span>
         </a>
          <a href="{{ route('clients') }}" class="option">
-            <i class="fa-solid fa-users"></i>
-            <span>Clientes</span>
+            <i class="fa-solid fa-hospital-user"></i>
+            <span>Pacientes</span>
         </a>
         <a href="{{ route('tests') }}" class="option">
             <i class="fa-solid fa-flask-vial"></i>
