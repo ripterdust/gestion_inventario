@@ -26,6 +26,9 @@ return new class extends Migration
             $table
                 ->string('ranges')
                 ->defualt('[]');
+            $table
+                ->double('price')
+                ->default(0.00);
         });
     }
 
