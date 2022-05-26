@@ -8,16 +8,22 @@
             Nuevo examen
         </div>
 
-        <div class="form">
+        <form method="post" action="/" class="form">
+            @method('post')
+            @csrf
             <div class="form-control">
-                <label for="Client">Nompre cliente:</label>
-                <input type="text" name="client" id="clientAutocomplete" />
+                <label for="Client">Nombre cliente:</label>
+                <input type="text" name="client" id="clientAutocomplete" required/>
             </div>
 
             <div class="form-control">
-                <label for="">Examen:</label>
-                <input type="text" name="testName" id="testAutocomplete">
+                <label for="test">Examen:</label>
+                <select name="test" id="test">
+                    <option value="Hematologia">Hematologia</option>
+                </select>
             </div>
-        </div>
+
+            <button type="submit" class="button">Nuevo examen</button>
+        </form>
     </div>
 @endsection

@@ -27,6 +27,8 @@ a {
     color: white;
     border-radius: 1em;
     font-size: 15px;
+    border: none;
+    cursor: pointer;
 
     &:active {
         transform: scale(0.9);
