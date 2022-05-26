@@ -29,7 +29,10 @@
             <i class="fa-solid fa-flask-vial"></i>
             <span>Examenes</span>
         </a>
-
+        <a href="{{ route('tests') }}" class="option">
+            <i class="fa-solid fa-vial-virus"></i>
+            <span>Laboratorios</span>
+        </a>
         <a href="{{route('employees')}}" class="option">
             <i class="fa-solid fa-people-carry-box"></i>
             <span>Empleados</span>
