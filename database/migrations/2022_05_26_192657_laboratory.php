@@ -20,6 +20,12 @@ return new class extends Migration
             $table
                 ->string('results')
                 ->default('[]');
+            $table
+                ->string('references')
+                ->default('[]');
+            $table
+                ->string('count')
+                ->defualt('[]');
         });
     }
 
