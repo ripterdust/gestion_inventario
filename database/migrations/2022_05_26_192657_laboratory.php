@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('laboratory', function(Blueprint $table){
+        Schema::create('laboratories', function(Blueprint $table){
             $table->id();
             $table->string('category');
             $table->string('name');
@@ -21,10 +21,10 @@ return new class extends Migration
                 ->string('results')
                 ->default('[]');
             $table
-                ->string('references')
+                ->string('parameters')
                 ->default('[]');
             $table
-                ->string('count')
+                ->string('ranges')
                 ->defualt('[]');
         });
     }
@@ -36,6 +36,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('laboratory');
+        Schema::dropIfExists('laboratories');
     }
 };
