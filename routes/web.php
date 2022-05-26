@@ -21,6 +21,9 @@ use App\Http\Controllers\TestController;
 // Clientes
 use App\Http\Controllers\ClientController;
 
+// Laboratory
+use App\Http\Controllers\LaboratoryController;
+
 // **** Admin panel
 // Dashboard
 Route::get('/dashboard', [DashboardController::class, 'index'])
@@ -58,6 +61,12 @@ Route::get('/clients', [ClientController::class, 'index'])
 Route::get('/clients/new', [ClientController::class, 'create'])
     ->middleware('auth')
     ->name('clients.new');
+
+// Laboratory
+
+Route::get('/laboratory', [LaboratoryController::class, 'index'])
+    ->middleware('auth')
+    ->name('laboratory');
 
 // ******* Authentication
 

@@ -29,7 +29,7 @@
             <i class="fa-solid fa-flask-vial"></i>
             <span>Examenes</span>
         </a>
-        <a href="{{ route('tests') }}" class="option">
+        <a href="{{ route('laboratory') }}" class="option">
             <i class="fa-solid fa-virus-covid"></i>
             <span>Laboratorios</span>
         </a>

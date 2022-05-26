@@ -13,7 +13,7 @@ class LaboratoryController extends Controller
      */
     public function index()
     {
-        //
+        return view('laboratory.index');
     }
 
     /**
