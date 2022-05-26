@@ -32,6 +32,8 @@
                 </select>
             </div>
 
+            {{ $laboratories }}
+
             <div class="form-submit">
                 <button type="submit" class="button">Nuevo examen</button>
             </div>
