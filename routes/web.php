@@ -38,7 +38,7 @@ Route::get('/tests', [TestController::class, 'index'])
     ->middleware('auth')
     ->name('tests');
 
-Route::get('/test/new', [TestController::class, 'create'])
+Route::get('/tests/new', [TestController::class, 'create'])
     ->middleware('auth')
     ->name('test.new');
 
