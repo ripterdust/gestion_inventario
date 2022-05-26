@@ -21,6 +21,10 @@
             <i class="fa-solid fa-house"></i>
             <span>Inicio</span>
         </a>
+         <a href="{{ route('clients') }}" class="option">
+            <i class="fa-solid fa-users"></i>
+            <span>Clientes</span>
+        </a>
         <a href="{{ route('tests') }}" class="option">
             <i class="fa-solid fa-flask-vial"></i>
             <span>Examenes</span>
@@ -30,10 +34,7 @@
             <i class="fa-solid fa-people-carry-box"></i>
             <span>Empleados</span>
         </a>
-        <a href="{{ route('clients') }}" class="option">
-            <i class="fa-solid fa-users"></i>
-            <span>Cliente</span>
-        </a>
+       
         
         <a href="/prueba" class="option">
             <i class="fa-solid fa-money-bill-trend-up"></i>
