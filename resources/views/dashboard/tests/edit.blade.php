@@ -5,7 +5,7 @@
 @section('content')
 
     <div class="box">
-        Acá irán los datos del {{ $id }}
+        Acá irán los datos del {{ $TESTName }}
     </div>
 
 @endsection

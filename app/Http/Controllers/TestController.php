@@ -73,7 +73,10 @@ class TestController extends Controller
      */
     public function edit($id)
     {
-        return view('dashboard.tests.edit', ['id' => $id]);
+        $test = Test::find($id)->first('TESTName', 'id');
+
+
+        return view('dashboard.tests.edit', ['TESTName' => $test->TESTName, 'id' => $test->id]);
     }
 
     /**
