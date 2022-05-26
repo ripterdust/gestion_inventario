@@ -17,11 +17,37 @@
             </div>
         </div>
     </div>
-    <div class="box">
+    <div class="box table_list">
         <div class="title title-with-btn">
             Pacientes
 
             <a href="/" class="button">Nuevo Paciente</a>
         </div>    
+
+        <table class="table">
+            <!-- Title -->
+
+            <tr>
+                <th>Nombre</th>
+                <th>Nit</th>
+                <th>Correo</th>
+                <th></th>
+            </tr>
+
+            <!-- List of clients -->
+            <tr>
+                <td>Bryan Arévalo</td>
+                <td>123124</td>
+                <td>bryantello2010@hotmail.com</td>
+                <td>
+                    <a href="" class="action">
+                        <i class="fa-solid fa-pen"></i>
+                    </a>
+                    <a href="" class="action">
+                        <i class="fa-solid fa-ban"></i>
+                    </a>
+                </td>
+            </tr>
+        </table>
     </div>
 @endsection
