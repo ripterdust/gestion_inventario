@@ -73,7 +73,7 @@ class TestController extends Controller
      */
     public function edit($id)
     {
-        return $id;
+        return view('dashboard.tests.edit', ['id' => $id]);
     }
 
     /**

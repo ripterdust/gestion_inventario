@@ -4,6 +4,8 @@
 
 @section('content')
 
-    Data examen
+    <div class="box">
+        Acá irán los datos del {{ $id }}
+    </div>
 
 @endsection
