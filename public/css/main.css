@@ -125,6 +125,12 @@ a {
   border-radius: 1em;
   cursor: pointer;
 }
+.dashboard .table_list .table tr:not(:first-child) td .action i {
+  text-align: center;
+}
+.dashboard .table_list .table tr:not(:first-child) td .mr {
+  margin-right: 0.5em;
+}
 .dashboard .table_list .table tr:not(:first-child) td i {
   font-size: 13px;
 }

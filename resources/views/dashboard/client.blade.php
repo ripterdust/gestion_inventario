@@ -39,9 +39,9 @@
                 <td>Bryan Arévalo</td>
                 <td>123124</td>
                 <td>bryantello2010@hotmail.com</td>
-                <td>
-                    <a href="" class="action">
-                        <i class="fa-solid fa-pen"></i>
+                <td >
+                    <a href="" class="action mr">
+                        <i class="fa-solid fa-user-pen"></i>
                     </a>
                     <a href="" class="action">
                         <i class="fa-solid fa-ban"></i>
