@@ -13,7 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('laboratory', function(Blueprint $table){
+            $table->id();
+            $table->string('category');
+            $table->string('name');
+            $table
+                ->string('results')
+                ->default('[]');
+        });
     }
 
     /**
@@ -23,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('laboratory');
     }
 };
