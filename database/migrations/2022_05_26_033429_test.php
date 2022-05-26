@@ -21,7 +21,9 @@ return new class extends Migration
             $table
                 ->integer('state')// 0 -> finished, 1 -> inclomplete, 2 -> ready
                 ->default(1);
-            $table->string('result');
+            $table
+                ->string('result')
+                ->default('[]');
         });
 
     }

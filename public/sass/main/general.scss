@@ -155,7 +155,29 @@ a {
 }
 
 .form {
-    .form-section {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    .form-submit {
+        display: flex;
+        height: 100%;
+        padding: 1em;
+    }
+    .form-control {
         background: white;
+        padding: 1em;
+        display: flex;
+        flex-direction: column;
+
+        label {
+            color: $lFontColor;
+        }
+
+        input,
+        select {
+            font-size: 16px;
+            color: $fontColor;
+            padding: 0.5em 1em;
+        }
     }
 }

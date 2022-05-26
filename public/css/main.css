@@ -129,8 +129,30 @@ a {
   font-size: 13px;
 }
 
-.form .form-section {
+.form {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.form .form-submit {
+  display: flex;
+  height: 100%;
+  padding: 1em;
+}
+.form .form-control {
   background: white;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+}
+.form .form-control label {
+  color: #677fa4;
+}
+.form .form-control input,
+.form .form-control select {
+  font-size: 16px;
+  color: #344767;
+  padding: 0.5em 1em;
 }
 
 aside {

@@ -13,7 +13,7 @@
             @csrf
             <div class="form-control">
                 <label for="Client">Nombre cliente:</label>
-                <input type="text" name="client" id="clientAutocomplete" required/>
+                <input type="text" name="client" id="clientAutocomplete" placeholder="Nombre" required/>
             </div>
 
             <div class="form-control">
@@ -23,7 +23,9 @@
                 </select>
             </div>
 
-            <button type="submit" class="button">Nuevo examen</button>
+            <div class="form-submit">
+                <button type="submit" class="button">Nuevo examen</button>
+            </div>
         </form>
     </div>
 @endsection
