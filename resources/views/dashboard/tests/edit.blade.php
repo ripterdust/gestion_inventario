@@ -4,4 +4,6 @@
 
 @section('content')
 
+    Data examen
+
 @endsection
