@@ -40,11 +40,10 @@ class TestController extends Controller
      */
     public function store(Request $request)
     {
-        // Validation
-        // $request->validate([
-        //     "name" => 'required',
-        //     "test" => 'required'
-        // ]);
+        $request->validate([
+            "name" => 'required',
+            "test" => 'required'
+        ]);
 
         // Saving by model
         $test = new Test;
@@ -74,7 +73,7 @@ class TestController extends Controller
      */
     public function edit($id)
     {
-        //
+        return redirect('tests');
     }
 
     /**

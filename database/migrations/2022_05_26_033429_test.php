@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('TESTName');
             $table->timestamps();
             $table
-                ->integer('state')// 0 -> finished, 1 -> inclomplete, 2 -> ready
+                ->integer('state')// 0 -> finished, 1 -> inclomplete,
                 ->default(1);
             $table
                 ->string('result')

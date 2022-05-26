@@ -46,6 +46,10 @@ Route::post('/tests', [TestController::class, 'store'])
     ->middleware('auth')
     ->name('test.store');
 
+Route::get('/tests/edit/{id}', [TestController::class, 'edit'])
+    ->middleware('auth')
+    ->name('test.edit');
+
 // Cientes
 Route::get('/clients', [ClientController::class, 'index'])
     ->middleware('auth')

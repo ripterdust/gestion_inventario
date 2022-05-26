@@ -9,7 +9,7 @@
             <div class="text">
                 <div class="title">Exámenes del mes</div>
                 <div class="number">
-                    20
+                    {{count($tests)}}
                 </div>
             </div>
 
@@ -31,18 +31,32 @@
             </tr>
 
             <!-- Table body -->
-            <tr>
-                <td>Juanito perex</td>
-                <td>Hemoglobina</td>
-                <td>12/02/22</td>
-                <td>Proceso</td>
-                <td>
-                    <a class="action">
-                        <i class="fa-solid fa-vial"></i>
-                    </a>
-                </td>
-            </tr>
 
+            @foreach($tests as $test)
+                <tr>
+                    <td>{{ $test->CLIName }}</td>
+                    <td>{{ $test->TESTName }}</td>
+                    <td>{{ $test->created_at }}</td>
+                    <td>
+                        @if ($test->state === 0)
+                            Finalizado
+                        @elseif($test->state == 1)
+                            Proceso
+                        @endif
+                    </td>
+                    <td>
+                        @if($test->state == 1)
+                            <a class="action">
+                                <i class="fa-solid fa-vial"></i>
+                            </a>
+                        @else
+                            <a class="action">
+                                <i class="fa-solid fa-download"></i>
+                            </a>
+                        @endif
+                    </td>
+                </tr>
+            @endforeach
         </table>
     </div>
 @endsection
