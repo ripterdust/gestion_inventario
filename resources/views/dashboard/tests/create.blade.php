@@ -32,6 +32,14 @@
                 </select>
             </div>
 
+            <div class="form-control">
+                <label for="test">Examen:</label>
+                <select name="laboratory" id="laboratory">
+                    
+                </select>
+                
+            </div>
+
             
 
             <div class="form-submit">
