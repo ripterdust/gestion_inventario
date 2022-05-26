@@ -134,6 +134,10 @@ a {
   align-items: center;
   height: 100%;
 }
+.form .error {
+  width: 100%;
+  background: linear-gradient(310deg, #7928ca, #ff0080);
+}
 .form .form-submit {
   display: flex;
   height: 100%;

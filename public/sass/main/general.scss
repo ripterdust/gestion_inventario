@@ -158,6 +158,11 @@ a {
     display: flex;
     align-items: center;
     height: 100%;
+
+    .error {
+        width: 100%;
+        background: $gradient;
+    }
     .form-submit {
         display: flex;
         height: 100%;

@@ -17,7 +17,7 @@ class TestController extends Controller
      */
     public function index()
     {
-        $tests = Test::orderBy('created_at')->get();
+        $tests = Test::orderByDesc('created_at')->get();
 
         return view('dashboard.tests', ['tests' => $tests]);
     }
@@ -41,7 +41,7 @@ class TestController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            "name" => 'required',
+            "client" => 'required',
             "test" => 'required'
         ]);
 
@@ -73,7 +73,7 @@ class TestController extends Controller
      */
     public function edit($id)
     {
-        return redirect('tests');
+        return $id;
     }
 
     /**

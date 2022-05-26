@@ -11,6 +11,11 @@
         <form method="post" action="{{route('test.store')}}" class="form">
             @method('post')
             @csrf
+            @error('name')
+                <div class="error">
+                    {{ $message }}
+                </div>
+            @enderror
             <div class="form-control">
                 <label for="Client">Nombre cliente:</label>
                 <input type="text" name="client" id="clientAutocomplete" placeholder="Nombre" required/>

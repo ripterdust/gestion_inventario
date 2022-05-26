@@ -46,7 +46,7 @@
                     </td>
                     <td>
                         @if($test->state == 1)
-                            <a class="action">
+                            <a class="action" href="{{ route('test.edit', ['id' => $test->id]) }}">
                                 <i class="fa-solid fa-vial"></i>
                             </a>
                         @else
