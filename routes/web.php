@@ -50,10 +50,14 @@ Route::get('/tests/edit/{id}', [TestController::class, 'edit'])
     ->middleware('auth')
     ->name('test.edit');
 
-// Cientes
+// Cients
 Route::get('/clients', [ClientController::class, 'index'])
     ->middleware('auth')
     ->name('clients');
+
+Route::get('/clients/new', [ClientController::class, 'create'])
+    ->middleware('auth')
+    ->name('clients.new');
 
 // ******* Authentication
 
