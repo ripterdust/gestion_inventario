@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+// Test model
+
+use App\Models\Test;
+
 class TestController extends Controller
 {
     /**
@@ -13,7 +17,9 @@ class TestController extends Controller
      */
     public function index()
     {
-        return view('dashboard.tests');
+        $tests = Test::orderBy('created_at')->get();
+
+        return view('dashboard.tests', ['tests' => $tests]);
     }
 
     /**
@@ -34,7 +40,19 @@ class TestController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // Validation
+        // $request->validate([
+        //     "name" => 'required',
+        //     "test" => 'required'
+        // ]);
+
+        // Saving by model
+        $test = new Test;
+        $test->CLIName = $request->client;
+        $test->TESTName = $request->test;
+        $test->save();
+        
+        return redirect('tests');
     }
 
     /**

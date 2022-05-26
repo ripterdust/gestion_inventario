@@ -8,7 +8,7 @@
             Nuevo examen
         </div>
 
-        <form method="post" action="/" class="form">
+        <form method="post" action="{{route('test.store')}}" class="form">
             @method('post')
             @csrf
             <div class="form-control">
