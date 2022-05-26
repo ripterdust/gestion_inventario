@@ -30,7 +30,7 @@
             <span>Examenes</span>
         </a>
         <a href="{{ route('tests') }}" class="option">
-            <i class="fa-solid fa-vial-virus"></i>
+            <i class="fa-solid fa-virus-covid"></i>
             <span>Laboratorios</span>
         </a>
         <a href="{{route('employees')}}" class="option">
