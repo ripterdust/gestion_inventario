@@ -22,9 +22,13 @@
             </div>
 
             <div class="form-control">
-                <label for="test">Examen:</label>
+                <label for="test">Categoría:</label>
                 <select name="test" id="test">
-                    <option value="Hematologia">Hematologia</option>
+                    @foreach($categories as $category)
+                        <option value="{{ $category->category }}">
+                            {{ $category->category }}
+                        </option>
+                    @endforeach
                 </select>
             </div>
 

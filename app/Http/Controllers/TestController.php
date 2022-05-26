@@ -5,8 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 // Test model
-
 use App\Models\Test;
+// Laboratory model
+use App\Models\Laboratory;
+
+// Category model
+use App\Models\Category;
 
 class TestController extends Controller
 {
@@ -29,7 +33,14 @@ class TestController extends Controller
      */
     public function create()
     {
-        return view('dashboard.tests.create');
+
+        $categories = Category::select('category')
+            ->get();
+
+        return view('dashboard.tests.create', [
+            "categories" => $categories,
+            "laboratories" => []
+        ]);
     }
 
     /**
