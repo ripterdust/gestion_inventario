@@ -113,7 +113,7 @@ class TestController extends Controller
      */
     public function update(Request $request, $id)
     {
-        return $requests;
+        return $id;
     }
 
     /**

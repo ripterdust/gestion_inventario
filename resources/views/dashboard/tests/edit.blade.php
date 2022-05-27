@@ -7,7 +7,7 @@
 <div class="box">
     <div class="title">{!! $name !!}</div>
 
-    <form action="{{ route('test.patch', ['id' => $id]) }}" method="post" class="formDataTest">
+    <form action="{{route('test.patch', ['id' => $id])}}" method="post" class="formDataTest">
         @method('post')
         @csrf
         <div class="params" id="params"></div>
