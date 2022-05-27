@@ -39,7 +39,7 @@
         </a>
        
         
-        <a href="/prueba" class="option">
+        <a href="{{ route('sales') }}" class="option">
             <i class="fa-solid fa-money-bill-trend-up"></i>
             <span>Ventas</span>
         </a>
