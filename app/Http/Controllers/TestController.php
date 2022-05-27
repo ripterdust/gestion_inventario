@@ -98,7 +98,9 @@ class TestController extends Controller
 
         return view('dashboard.tests.edit', [
             'parameters' => $laboratory, 
-            'id' => $test->id]
+            'id' => $test->id,
+            'name' => $test->TESTName
+            ],
         );
     }
 
