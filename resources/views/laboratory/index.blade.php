@@ -30,11 +30,20 @@
             </tr>
 
             <!-- Table body -->
-            <tr>
-                <td>Hematología completa</td>
-                <td>Hematología</td>
-                <td>Q.100.00</td>
-            </tr>
+            @foreach($laboratories as $laboratory)
+                <tr>
+                    <td>{{ $laboratory->name }}</td>
+                    <td>{{ $laboratory->category }}</td>
+                    <td>Q.{{ number_format($laboratory->price, 2) }}</td>
+                </tr>
+            @endforeach
+            
         </table>
+
+        <div class="pagination">
+            @if ($laboratories->links()->paginator->hasPages())
+                {{ $laboratories->links() }}
+            @endif
+        </div>
     </div>
 @endsection
