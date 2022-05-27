@@ -24,6 +24,13 @@ use App\Http\Controllers\ClientController;
 // Laboratory
 use App\Http\Controllers\LaboratoryController;
 
+
+// **** Validation
+Route::get('/', function(){
+    return redirect()->route('home');
+})
+    ->middleware('auth');
+
 // **** Admin panel
 // Dashboard
 Route::get('/dashboard', [DashboardController::class, 'index'])
