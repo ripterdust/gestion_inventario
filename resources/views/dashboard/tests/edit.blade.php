@@ -4,8 +4,8 @@
 
 @section('content')
 
-    <div class="box">
-        Acá irán los datos del {{ $TESTName }}
-    </div>
+<div class="box">
+    
+</div>
 
 @endsection

@@ -93,8 +93,10 @@ class TestController extends Controller
     {
         $test = Test::find($id)->first('TESTName', 'id');
 
-
-        return view('dashboard.tests.edit', ['TESTName' => $test->TESTName, 'id' => $test->id]);
+        return view('dashboard.tests.edit', ['
+            TESTName' => $test->TESTName, 
+            'id' => $test->id]
+        );
     }
 
     /**
