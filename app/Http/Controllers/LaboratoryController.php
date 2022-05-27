@@ -22,8 +22,13 @@ class LaboratoryController extends Controller
         $count = Laboratory::all()
             ->count();
 
+        $laboratories = Laboratory::select('price', 'category', 'name')
+            ->simplePaginate(4);
+        
+
         return view('laboratory.index', [
-            'count' => $count
+            'count' => $count,
+            'laboratories' => $laboratories
         ]);
     }
 
