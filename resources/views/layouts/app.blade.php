@@ -41,9 +41,9 @@
             <i class="fa-solid fa-money-bill-trend-up"></i>
             <span>Ventas</span>
         </a>
-        <a href="{{ route('sales') }}" class="option">
+        <a href="{{ route('inventory') }}" class="option">
             <i class="fa-solid fa-boxes-stacked"></i>
-            <span>Inventrio</span>
+            <span>Inventario</span>
         </a>
     </div>
 </aside>

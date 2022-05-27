@@ -27,6 +27,9 @@ use App\Http\Controllers\LaboratoryController;
 // Sales
 use App\Http\Controllers\SalesController;
 
+// Inventory
+use App\Http\Controllers\InventoryController;
+
 // ******** ROUTER
 
 // **** Validation
@@ -83,6 +86,11 @@ Route::get('/sales', [SalesController::class, 'index'])
 Route::get('/laboratory', [LaboratoryController::class, 'index'])
     ->middleware('auth')
     ->name('laboratory');
+
+// Inventory
+Route::get('/inventory', [InventoryController::class, 'index'])
+    ->middleware('auth')
+    ->name('inventory');
 
 // ******* Authentication
 
