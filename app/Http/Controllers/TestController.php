@@ -21,7 +21,7 @@ class TestController extends Controller
      */
     public function index()
     {
-        $tests = Test::orderByDesc('created_at')->get();
+        $tests = Test::orderByDesc('created_at')->simplePaginate(4);
 
         return view('dashboard.tests', ['tests' => $tests]);
     }

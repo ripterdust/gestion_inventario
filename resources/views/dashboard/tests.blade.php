@@ -57,6 +57,12 @@
                     </td>
                 </tr>
             @endforeach
+
         </table>
+        <div class="pagination">
+            @if ($tests->links()->paginator->hasPages())
+                {{ $tests->links() }}
+            @endif
+        </div>
     </div>
 @endsection
