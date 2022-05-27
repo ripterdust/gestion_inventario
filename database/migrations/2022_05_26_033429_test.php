@@ -23,7 +23,7 @@ return new class extends Migration
                 ->default(1);
             $table
                 ->string('result')
-                ->default('[]');
+                ->default('{}');
         });
 
     }

@@ -113,7 +113,25 @@ class TestController extends Controller
      */
     public function update(Request $request, $id = 1)
     {
-        return $id;
+
+        // Query
+
+        $test = Test::find($id);
+
+        // Getting data
+        $keys = array_keys($request->toArray());
+        $array = array();
+
+        for ($i=0; $i < count($keys); $i++) { 
+            $name = $keys[$i];
+            if($name[0] != '_'){
+                $array[$name] = $request[$name];
+            }
+        }
+        
+        $test->result = json_encode($array);
+
+        return $test;
     }
 
     /**
