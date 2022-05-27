@@ -1,33 +1,16 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-// My controllers
 
-// Dashboard
+// ***** Controllers
 use App\Http\Controllers\DashboardController;
-
-// Employees 
 use App\Http\Controllers\EmployeesController;
-
-// Login
 use App\Http\Controllers\SessionsController;
-
-// Register
 use App\Http\Controllers\RegisterController;
-
-// Tests
 use App\Http\Controllers\TestController;
-
-// Clientes
 use App\Http\Controllers\ClientController;
-
-// Laboratory
 use App\Http\Controllers\LaboratoryController;
-
-// Sales
 use App\Http\Controllers\SalesController;
-
-// Inventory
 use App\Http\Controllers\InventoryController;
 
 // ******** ROUTER
