@@ -130,8 +130,11 @@ class TestController extends Controller
         }
         
         $test->result = json_encode($array);
+        $test->state = 0;
+        
+        $test->save();
 
-        return $test;
+        return redirect()->route('tests');
     }
 
     /**
