@@ -64,6 +64,7 @@ class TestController extends Controller
         $test = new Test;
         $test->CLIName = $request->client;
         $test->TESTName = $request->test;
+        $test->result = '{}';
         $test->save();
         
         return redirect('tests');
