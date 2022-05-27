@@ -291,4 +291,20 @@ aside .options .activo i {
   color: #677fa4;
 }
 
+.formDataTest {
+  margin: 1em 0;
+}
+.formDataTest .params .param {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 0.5em;
+}
+.formDataTest .params .param input {
+  padding: 0.5em 1em;
+}
+.formDataTest .params .param .paramsTest {
+  text-align: right;
+}
+
 /*# sourceMappingURL=main.css.map */
