@@ -23,7 +23,12 @@ class TestController extends Controller
     {
         $tests = Test::orderByDesc('created_at')->simplePaginate(4);
 
-        return view('dashboard.tests', ['tests' => $tests]);
+        $count = Test::all()
+            ->count();
+        return view('dashboard.tests', [
+            'tests' => $tests,
+            'count' => $count
+        ]);
     }
 
     /**

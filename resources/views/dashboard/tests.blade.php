@@ -9,7 +9,7 @@
             <div class="text">
                 <div class="title">Exámenes del mes</div>
                 <div class="number">
-                    {{count($tests)}}
+                    {{ $count }}
                 </div>
             </div>
 
