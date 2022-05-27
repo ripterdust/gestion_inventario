@@ -50,6 +50,9 @@ Route::get('/tests/edit/{id}', [TestController::class, 'edit'])
     ->middleware('auth')
     ->name('test.edit');
 
+Route::post('/test/{id}', [TestController::class, 'update'])    
+    ->middleware('auth')
+    ->name('test.patch');
 // Cients
 Route::get('/clients', [ClientController::class, 'index'])
     ->middleware('auth')
