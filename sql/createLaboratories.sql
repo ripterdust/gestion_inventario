@@ -54,5 +54,5 @@ values
 
 update laboratories 
 set 
-    parameters = ""
+    parameters = '{"Rec. Globulos blancos":"5000 - 10,000 mm3","Rec. Globulos rojos":"4,5000,000 - 10,000,00 mm3","Hemoglobina":"12.6 - 16.0 gr/dr","Plaquetas":"150.000 - 500.00/ mm3","Formula Referencia":"","Segmentados":"45 - 64%","Linfositos":"20 - 45%","Monocitos":"0 - 5%","Eosinofilos":"1.0 - 5.0%","Velocidad de sedmentación":"0 - 15 mm/hrs"}'
 where id = 1;
