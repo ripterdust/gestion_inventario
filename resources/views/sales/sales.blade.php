@@ -6,7 +6,7 @@
 <div class="metrics">
     <div class="metric">
         <div class="text">
-            <div class="title">Total ventas</div>
+            <div class="title">Ventas del mes</div>
             <div class="number">1000</div>
         </div>
         <div class="icon">
@@ -15,7 +15,7 @@
     </div>
     <div class="metric">
         <div class="text">
-            <div class="title">Ventas del mes</div>
+            <div class="title">Ventas de hoy</div>
             <div class="number">1000</div>
         </div>
         <div class="icon">
