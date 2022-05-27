@@ -5,10 +5,10 @@
 @section('content')
 
 <div class="box">
-    <div class="title">{!! $name !!}</div>
+    <div class="title">{!! $test->TESTName !!}</div>
 
     <form action="{{route('test.patch', ['id' => $id])}}" method="post" class="formDataTest">
-        @method('post')
+        @method('PATCH')
         @csrf
         <div class="params" id="params"></div>
         <input type="submit" value="Guardar" class="button" />

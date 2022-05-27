@@ -91,15 +91,15 @@ class TestController extends Controller
      */
     public function edit($id)
     {
-        $test = Test::find($id)->first('TESTName', 'id');
+        $test = Test::find($id)->first('TESTName');
         $laboratory = Laboratory::select('parameters')
             ->where('name', $test->TESTName)
             ->get();
 
         return view('dashboard.tests.edit', [
             'parameters' => $laboratory, 
-            'id' => $test->id,
-            'name' => $test->TESTName
+            'test' => $test,
+            'id' => $id
             ],
         );
     }
@@ -111,7 +111,7 @@ class TestController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $id = 1)
     {
         return $id;
     }

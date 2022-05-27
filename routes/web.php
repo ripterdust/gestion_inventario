@@ -46,11 +46,11 @@ Route::post('/tests', [TestController::class, 'store'])
     ->middleware('auth')
     ->name('test.store');
 
-Route::get('/tests/edit/{id}', [TestController::class, 'edit'])
+Route::get('/tests/{id}/edit', [TestController::class, 'edit'])
     ->middleware('auth')
     ->name('test.edit');
 
-Route::post('/test/{id}', [TestController::class, 'update'])    
+Route::patch('/test/{id}/update', [TestController::class, 'update'])    
     ->middleware('auth')
     ->name('test.patch');
 // Cients
