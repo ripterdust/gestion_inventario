@@ -18,11 +18,11 @@ return new class extends Migration
             $table->string('category');
             $table->string('name');
             $table
-                ->longText('parameters')
-                ->defualt('{}');
+                ->longText('parameters');
+                // ->default('{}');
             $table
                 ->double('price')
-                ->default(0.00);
+                ->default(0);
         });
     }
 

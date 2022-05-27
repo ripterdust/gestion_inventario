@@ -49,7 +49,8 @@
     </div>
 
     <script>
-        const laboratories = JSON.parse('{!! $laboratories !!}');
+        const laboratories = {!! $laboratories !!};
+        console.log(laboratories)
     </script>
     <script src="{{ asset('js/fixByCategory.js') }}"></script>
 @endsection
