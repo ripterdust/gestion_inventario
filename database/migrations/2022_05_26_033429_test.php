@@ -22,8 +22,7 @@ return new class extends Migration
                 ->integer('state')// 0 -> finished, 1 -> inclomplete,
                 ->default(1);
             $table
-                ->string('result')
-                ->default('{}');
+                ->longText('result');
         });
 
     }
