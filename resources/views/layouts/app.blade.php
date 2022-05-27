@@ -37,13 +37,14 @@
             <i class="fa-solid fa-people-carry-box"></i>
             <span>Empleados</span>
         </a>
-       
-        
         <a href="{{ route('sales') }}" class="option">
             <i class="fa-solid fa-money-bill-trend-up"></i>
             <span>Ventas</span>
         </a>
-        
+        <a href="{{ route('sales') }}" class="option">
+            <i class="fa-solid fa-boxes-stacked"></i>
+            <span>Productos</span>
+        </a>
     </div>
 </aside>
 
