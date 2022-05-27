@@ -7,7 +7,7 @@
         <div class="metric">
             <div class="text">
                 <div class="title">Total laboratorios</div>
-                <div class="number">123</div>
+                <div class="number">{{ $count }}</div>
             </div>
             <div class="icon">
                 <i class="fa-solid fa-virus-covid"></i>

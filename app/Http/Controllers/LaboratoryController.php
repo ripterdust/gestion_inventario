@@ -4,6 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+// **** Models
+
+// Laboratory
+use App\Models\Laboratory;
+
 class LaboratoryController extends Controller
 {
     /**
@@ -13,7 +18,13 @@ class LaboratoryController extends Controller
      */
     public function index()
     {
-        return view('laboratory.index');
+
+        $count = Laboratory::all()
+            ->count();
+
+        return view('laboratory.index', [
+            'count' => $count
+        ]);
     }
 
     /**
