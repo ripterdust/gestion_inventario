@@ -18,14 +18,8 @@ return new class extends Migration
             $table->string('category');
             $table->string('name');
             $table
-                ->string('results')
-                ->default('[]');
-            $table
-                ->string('parameters')
-                ->default('[]');
-            $table
-                ->string('ranges')
-                ->defualt('[]');
+                ->longText('parameters')
+                ->defualt('{}');
             $table
                 ->double('price')
                 ->default(0.00);
