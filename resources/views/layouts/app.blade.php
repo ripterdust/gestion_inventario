@@ -43,7 +43,7 @@
         </a>
         <a href="{{ route('sales') }}" class="option">
             <i class="fa-solid fa-boxes-stacked"></i>
-            <span>Productos</span>
+            <span>Inventrio</span>
         </a>
     </div>
 </aside>
