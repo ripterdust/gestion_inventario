@@ -4,12 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-// Test model
+// Models
 use App\Models\Test;
-// Laboratory model
 use App\Models\Laboratory;
-
-// Category model
 use App\Models\Category;
 
 class TestController extends Controller
@@ -113,9 +110,7 @@ class TestController extends Controller
      */
     public function update(Request $request, $id = 1)
     {
-
         // Query
-
         $test = Test::find($id);
 
         // Getting data
@@ -131,7 +126,6 @@ class TestController extends Controller
         
         $test->result = json_encode($array);
         $test->state = 0;
-        
         $test->save();
 
         return redirect()->route('tests');
