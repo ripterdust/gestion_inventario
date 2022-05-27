@@ -41,7 +41,8 @@ class TestController extends Controller
 
         $categories = Category::select('category')
             ->get();
-        $laboratories = Laboratory::all();
+        $laboratories = Laboratory::select('name', 'category')
+            ->get();
 
         return view('dashboard.tests.create', [
             "categories" => $categories,
