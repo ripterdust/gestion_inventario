@@ -92,9 +92,12 @@ class TestController extends Controller
     public function edit($id)
     {
         $test = Test::find($id)->first('TESTName', 'id');
+        $laboratory = Laboratory::select('parameters')
+            ->where('name', $test->TESTName)
+            ->get();
 
-        return view('dashboard.tests.edit', ['
-            TESTName' => $test->TESTName, 
+        return view('dashboard.tests.edit', [
+            'parameters' => $laboratory, 
             'id' => $test->id]
         );
     }

@@ -5,7 +5,7 @@
 @section('content')
 
 <div class="box">
-    
+    {{ $options }}
 </div>
 
 @endsection
