@@ -24,6 +24,10 @@ use App\Http\Controllers\ClientController;
 // Laboratory
 use App\Http\Controllers\LaboratoryController;
 
+// Sales
+use App\Http\Controllers\SalesController;
+
+// ******** ROUTER
 
 // **** Validation
 Route::get('/', function(){
@@ -68,6 +72,11 @@ Route::get('/clients', [ClientController::class, 'index'])
 Route::get('/clients/new', [ClientController::class, 'create'])
     ->middleware('auth')
     ->name('clients.new');
+
+// Sales
+Route::get('/sales', [SalesController::class, 'index'])
+    ->middleware('auth')
+    ->name('sales');
 
 // Laboratory
 

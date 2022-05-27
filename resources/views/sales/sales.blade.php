@@ -2,6 +2,7 @@
 
 @section('title', 'Ventas')
 
+@section('content')
 <div class="metrics">
     <div class="metric">
         <div class="text">
