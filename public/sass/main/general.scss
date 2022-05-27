@@ -38,6 +38,11 @@ a {
     }
 }
 
+input:focus {
+    outline-color: $purple;
+    color: $purple;
+}
+
 // white box bg
 .box {
     width: 100%;

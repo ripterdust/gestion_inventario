@@ -39,6 +39,11 @@ a {
   transform: scale(0.9);
 }
 
+input:focus {
+  outline-color: #7928ca;
+  color: #7928ca;
+}
+
 .box {
   width: 100%;
   background: white;
