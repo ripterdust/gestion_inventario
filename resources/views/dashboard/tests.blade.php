@@ -50,7 +50,7 @@
                                 <i class="fa-solid fa-vial"></i>
                             </a>
                         @else
-                            <a class="action">
+                            <a class="action" href="{{ route('test.show', ['id' => $test->id]) }}">
                                 <i class="fa-solid fa-download"></i>
                             </a>
                         @endif
