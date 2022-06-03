@@ -80,12 +80,22 @@ class TestController extends Controller
      */
     public function show($id)
     {
-
         $test = Test::find($id);
+        
+        $results = json_decode($test->result, true);
 
-        $pdf = PDF::loadView('dashboard.tests.pdf', ['results' => $test->result]);
-        return view('dashboard.tests.pdf');
+        $keys = array_keys($results);
+
+        $data = [
+            'results' => $results,
+            "keys" => $keys,
+            "name" => $test->CLIName,
+            "date" => $test->created_at
+        ];
+        
+        $pdf = PDF::loadView('dashboard.tests.pdf', $data);
         return $pdf->stream();
+
     }
 
     /**
