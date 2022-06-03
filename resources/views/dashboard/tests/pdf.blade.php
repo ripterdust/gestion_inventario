@@ -26,6 +26,10 @@
     .title {
        margin: 0 0 1em 0;
    }
+
+   .title th {
+       text-align: left;
+   }
 </style>
 <div class="pdf">
 
