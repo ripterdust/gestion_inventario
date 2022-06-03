@@ -78,7 +78,12 @@ class TestController extends Controller
      */
     public function show($id)
     {
-        return $id;
+
+        $test = Test::find($id);
+
+        return $test;
+
+        return view('dashboard.tests.pdf', compact('test', $test));
         
     }
 
