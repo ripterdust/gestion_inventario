@@ -53,6 +53,11 @@ Route::get('/tests/{id}/edit', [TestController::class, 'edit'])
 Route::patch('/test/{id}/update', [TestController::class, 'update'])    
     ->middleware('auth')
     ->name('test.patch');
+
+
+Route::get('tests/{id}/result', [TestController::class, 'show'])
+    ->middleware('auth')
+    ->name('test.show');
 // Cients
 Route::get('/clients', [ClientController::class, 'index'])
     ->middleware('auth')
