@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+// PDF
+use PDF;
 // Models
 use App\Models\Test;
 use App\Models\Laboratory;
@@ -81,10 +83,9 @@ class TestController extends Controller
 
         $test = Test::find($id);
 
-        return $test;
-
-        return view('dashboard.tests.pdf', compact('test', $test));
-        
+        $pdf = PDF::loadView('dashboard.tests.pdf', ['results' => $test->result]);
+        return view('dashboard.tests.pdf');
+        return $pdf->stream();
     }
 
     /**
