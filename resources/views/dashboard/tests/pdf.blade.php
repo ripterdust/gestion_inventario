@@ -11,25 +11,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
 </style>
 <style>
+.blueBg{
+    background: rgba(52, 152, 219, .3);
+}
 
-    *{
-        font-family: 'Poppins', sans-serif;
-    }
-    table {
-       width: 100%;
-   }
+* {
+    color: #333;
+}
 
-    td {
-       text-align: left;
-   }
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
 
-    .title {
-       margin: 0 0 1em 0;
-   }
+td {
+  text-align: left;
+}
 
-   .title th {
-       text-align: left;
-   }
+.title {
+  margin: 0 0 3em 0;
+  font-size: 14px;
+}
+.title th {
+  text-align: left;
+
+}
+
+.title {
+    border: 1px solid rgba(0,0,0,.8);
+}
+
+.title tr > * {
+    padding: 5px;
+}
+
+.title tr td:first-child, .title tr th:first-child {
+    border-right: 1px solid rgba(0,0,0,.8);
+
+}
+
+.testName{
+    width: 100%;
+    text-align: center;
+}
+
 </style>
 <div class="pdf">
 
@@ -39,11 +64,14 @@
             <th>Fecha: {{$date}}</th>
         </tr>
         <tr>
-            <th>Medico: Tratante</th>
-            <td></td>
+            <th class="blueBg">Medico: Tratante</th>
+            <td class="blueBg"></td>
         </tr>
     </table>
 
+    <div class="testName">
+        {{ $test }}
+    </div>
     <table class="results">
         @foreach($keys as $key)
             @if($results[$key] != '')

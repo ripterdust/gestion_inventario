@@ -90,12 +90,12 @@ class TestController extends Controller
             'results' => $results,
             "keys" => $keys,
             "name" => $test->CLIName,
-            "date" => $test->created_at
+            "date" => $test->created_at,
+            "test" => $test->TESTName
         ];
         
         $pdf = PDF::loadView('dashboard.tests.pdf', $data);
         return $pdf->stream();
-
     }
 
     /**

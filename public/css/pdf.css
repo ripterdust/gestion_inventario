@@ -1,3 +1,16 @@
+table {
+  width: 100%;
+}
 
+td {
+  text-align: left;
+}
+
+.title {
+  margin: 0 0 1em 0;
+}
+.title th {
+  text-align: left;
+}
 
 /*# sourceMappingURL=pdf.css.map */

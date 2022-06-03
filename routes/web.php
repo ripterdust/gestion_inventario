@@ -16,7 +16,7 @@ use App\Http\Controllers\InventoryController;
 // ******** ROUTER
 
 // **** Validation
-Route::get('/', function(){
+Route::get('/', function () {
     return redirect()->route('home');
 })
     ->middleware('auth');
@@ -26,7 +26,6 @@ Route::get('/', function(){
 Route::get('/dashboard', [DashboardController::class, 'index'])
     ->middleware('auth')
     ->name('home');
-
 
 // Employees
 Route::get('/employees', [EmployeesController::class, 'index'])
@@ -50,7 +49,7 @@ Route::get('/tests/{id}/edit', [TestController::class, 'edit'])
     ->middleware('auth')
     ->name('test.edit');
 
-Route::patch('/test/{id}/update', [TestController::class, 'update'])    
+Route::patch('/test/{id}/update', [TestController::class, 'update'])
     ->middleware('auth')
     ->name('test.patch');
 
