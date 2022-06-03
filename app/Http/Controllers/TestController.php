@@ -78,7 +78,7 @@ class TestController extends Controller
      */
     public function show($id)
     {
-        // Generate the pdf
+        return $id;
         
     }
 
