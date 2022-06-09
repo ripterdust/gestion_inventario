@@ -18,7 +18,15 @@
             @enderror
             <div class="form-control">
                 <label for="Client">Nombre paciente:</label>
-                <input type="text" name="client" id="clientAutocomplete" placeholder="Nombre" required/>
+                <select name="client" id="clientAutocomplete" required>
+                    <option value="hola">
+                        @foreach($clients as $client)
+                            <option value="{{ $client->name }}">
+                                {{ $client->name }}
+                            </option>
+                        @endforeach
+                    </option>
+                </select>
             </div>
 
             <div class="form-control">

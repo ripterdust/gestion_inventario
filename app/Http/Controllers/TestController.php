@@ -10,6 +10,7 @@ use PDF;
 use App\Models\Test;
 use App\Models\Laboratory;
 use App\Models\Category;
+use App\Models\Client;
 
 class TestController extends Controller
 {
@@ -43,9 +44,12 @@ class TestController extends Controller
         $laboratories = Laboratory::select('name', 'category')
             ->get();
 
+        $clients = Client::select('name');
+
         return view('dashboard.tests.create', [
             "categories" => $categories,
-            "laboratories" => $laboratories
+            "laboratories" => $laboratories,
+            "clients" => $clients
         ]);
     }
 
