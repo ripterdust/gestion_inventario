@@ -61,4 +61,6 @@ where id = 1;
 /* Creating new client */
 
 INSERT INTO clients(name, nit, mail)
-VALUES ('Bryan Arévalo', '1428075-8', 'Bryantello2010@hotmail.com');
+VALUES 
+('Bryan Arévalo', '1428075-8', 'Bryantello2010@hotmail.com'),
+('Juanito Perez', '12313414', 'juanitoperez@correoelectronico.com');
