@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 
 // Test
 use App\Models\Test;
+use App\Models\Client;
 
 class DashboardController extends Controller
 {
@@ -21,8 +22,12 @@ class DashboardController extends Controller
         $tests = Test::orderByDesc('created_at')
             ->count();
 
+        $clients = Client::all()
+            ->count();
+
         return view('dashboard.index', [
-            'tests' => $tests
+            'tests' => $tests,
+            'clients' => $clients
         ]);
     }
 

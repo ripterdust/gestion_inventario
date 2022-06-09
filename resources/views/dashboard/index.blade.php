@@ -18,7 +18,7 @@
         <div class="text">
             <div class="title">Pacientes mes</div>
             <div class="number">
-                80
+                {{ $clients }}
             </div>
         </div>
 
