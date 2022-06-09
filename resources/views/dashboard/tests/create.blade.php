@@ -19,13 +19,11 @@
             <div class="form-control">
                 <label for="Client">Nombre paciente:</label>
                 <select name="client" id="clientAutocomplete" required>
-                    <option value="hola">
-                        @foreach($clients as $client)
-                            <option value="{{ $client->name }}">
-                                {{ $client->name }}
-                            </option>
-                        @endforeach
-                    </option>
+                    @foreach($clients as $client)
+                        <option value="{{ $client->name }}">
+                            {{ $client->name }}
+                        </option>
+                    @endforeach
                 </select>
             </div>
 
