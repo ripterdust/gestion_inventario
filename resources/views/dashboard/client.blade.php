@@ -21,7 +21,7 @@
         <div class="title title-with-btn">
             Pacientes
 
-            <a href="/" class="button">Nuevo Paciente</a>
+            <a href="{{ route('clients.new') }}" class="button">Nuevo Paciente</a>
         </div>    
 
         <table class="table">
