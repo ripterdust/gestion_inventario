@@ -5,5 +5,9 @@
 
 @section('content')
 
-    Acá irán los pascientes
+    <div class="box">
+        <div class="title">Nuevo paciente</div>
+
+    </div>
+
 @endsection
