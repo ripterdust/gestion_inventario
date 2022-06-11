@@ -35,19 +35,21 @@
             </tr>
 
             <!-- List of clients -->
-            <tr>
-                <td>Bryan Arévalo</td>
-                <td>123124</td>
-                <td>bryantello2010@hotmail.com</td>
-                <td >
-                    <a href="" class="action mr">
-                        <i class="fa-solid fa-user-pen"></i>
-                    </a>
-                    <a href="" class="action">
-                        <i class="fa-solid fa-ban"></i>
-                    </a>
-                </td>
-            </tr>
+            @foreach($clients as $client)
+                <tr>
+                    <td>{{ $client->name }}</td>
+                    <td>{{ $client->nit }}</td>
+                    <td>{{ $client->mail }}</td>
+                    <td>
+                        <a href="" class="action mr">
+                            <i class="fa-solid fa-user-pen"></i>
+                        </a>
+                        <a href="" class="action">
+                            <i class="fa-solid fa-ban"></i>
+                        </a>
+                    </td>
+                </tr>
+            @endforeach
         </table>
     </div>
 @endsection
