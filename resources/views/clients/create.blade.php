@@ -8,6 +8,8 @@
     <div class="box">
         <div class="title">Nuevo paciente</div>
 
+        
+
     </div>
 
 @endsection
