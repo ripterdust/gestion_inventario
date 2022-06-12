@@ -54,6 +54,7 @@
                 autocomplete="off"
                 placeholder=" "
                 name="phone"
+                oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
                 required/>
                 <label for="phone" class="form-control-label">Teléfono</label>
             </div>
