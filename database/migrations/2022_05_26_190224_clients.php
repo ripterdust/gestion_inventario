@@ -20,6 +20,8 @@ return new class extends Migration
                 ->string('nit')
                 ->default('C/F');
             $table->string('mail');
+            $table->string('birth');
+            $table->string('phone');
             $table->timestamps();
         });
     }
