@@ -31,9 +31,9 @@
                 class="form-control-input"
                 autocomplete="off"
                 placeholder=" "
-                name="email"
+                name="mail"
                 required/>
-                <label for="email" class="form-control-label">Correo electrónico</label>    
+                <label for="mail" class="form-control-label">Correo electrónico</label>    
             </div>
 
             <div class="form-control">

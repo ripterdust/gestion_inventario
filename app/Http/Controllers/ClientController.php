@@ -42,7 +42,12 @@ class ClientController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'mail' => 'required|string|unique:clients',
+            'name' => 'required|string',
+            'phone' => 'required|string',
+            'adress' => 'string'
+        ]);
     }
 
     /**
