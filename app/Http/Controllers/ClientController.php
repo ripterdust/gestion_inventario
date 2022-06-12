@@ -55,6 +55,8 @@ class ClientController extends Controller
         $client->name = $request->name;
         $client->phone = $request->phone;
         $client->adress = $request->adress;
+        $client->birth = $request->birth;
+        $client->nit = $request->nit;
         $client->save();
 
         return redirect()->route('clients');

@@ -27,6 +27,16 @@
 
             <div class="form-control">
                 <input 
+                    type="date" 
+                    name="birth"
+                    autocomplete="off"
+                    placeholder=" "
+                    class="form-control-input"
+                    required/>
+            </div>
+
+            <div class="form-control">
+                <input 
                 type="email"
                 class="form-control-input"
                 autocomplete="off"
@@ -34,6 +44,18 @@
                 name="mail"
                 required/>
                 <label for="mail" class="form-control-label">Correo electrónico</label>    
+            </div>
+
+            
+            <div class="form-control">
+                <input 
+                    type="text" 
+                    name="nit"
+                    autocomplete="off"
+                    placeholder=" "
+                    class="form-control-input"
+                    required/>
+                <label for="nit" class="form-control-label">Nit</label>
             </div>
 
             <div class="form-control">
@@ -58,6 +80,9 @@
                 required/>
                 <label for="phone" class="form-control-label">Teléfono</label>
             </div>
+
+
+            
 
             <div class="form-submit">
                 <button class="button">Agregar cliente</button>
