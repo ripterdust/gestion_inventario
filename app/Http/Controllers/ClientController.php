@@ -31,7 +31,7 @@ class ClientController extends Controller
      */
     public function create()
     {
-        return view('clients.new');
+        return view('clients.create');
     }
 
     /**
