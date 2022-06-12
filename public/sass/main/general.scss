@@ -179,6 +179,10 @@ input:focus {
     .error {
         width: 100%;
         background: $gradient;
+        color: white;
+        border-radius: $radius;
+        padding: 1em;
+        margin-bottom: 1em;
     }
     .form-submit {
         display: flex;

@@ -13,7 +13,42 @@
         <form action="{{ route('clients.store') }}" method="post" class="form">
         @csrf
         @method('POST')
-        
+            
+            @error('mail')
+                <div class="error">
+                    {{ $message }}
+                </div>
+            @enderror
+
+            @error('phone')
+                <div class="error">
+                    {{ $message }}
+                </div>
+            @enderror
+
+            @error('nit')
+                <div class="error">
+                    {{ $message }}
+                </div>
+            @enderror
+
+            @error('name')
+                <div class="error">
+                    {{ $message }}
+                </div>
+            @enderror
+            @error('birth')
+                <div class="error">
+                    {{ $message }}
+                </div>
+            @enderror
+
+            @error('adress')
+                <div class="error">
+                    {{ $message }}
+                </div>
+            @enderror
+            
             <div class="form-control">
                 <input 
                 type="text"
