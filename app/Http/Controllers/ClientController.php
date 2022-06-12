@@ -48,6 +48,16 @@ class ClientController extends Controller
             'phone' => 'required|string',
             'adress' => 'string'
         ]);
+
+        // Saving the client
+        $client = new Client;
+        $client->mail = $request->mail;
+        $client->name = $request->name;
+        $client->phone = $request->phone;
+        $client->adress = $request->adress;
+        $client->save();
+
+        return redirect('/');
     }
 
     /**
