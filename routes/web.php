@@ -66,6 +66,10 @@ Route::get('/clients/new', [ClientController::class, 'create'])
     ->middleware('auth')
     ->name('clients.new');
 
+Route::post('/clients', [ClientController::class, 'store'])
+    ->middleware('auth')
+    ->name('clients.store');
+
 // Sales
 Route::get('/sales', [SalesController::class, 'index'])
     ->middleware('auth')

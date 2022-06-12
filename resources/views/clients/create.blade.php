@@ -10,7 +10,7 @@
 
         {{-- Form to add the client --}}
 
-        <form action="/" method="post" class="form">
+        <form action="{{ route('clients.store') }}" method="post" class="form">
         @csrf
         @method('POST')
         
