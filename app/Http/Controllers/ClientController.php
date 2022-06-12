@@ -57,7 +57,7 @@ class ClientController extends Controller
         $client->adress = $request->adress;
         $client->save();
 
-        return redirect('/');
+        return redirect()->route('clients');
     }
 
     /**
