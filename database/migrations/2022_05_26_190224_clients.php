@@ -22,6 +22,9 @@ return new class extends Migration
             $table->string('mail');
             $table->string('birth');
             $table->string('phone');
+            $table
+                ->string('adress')
+                ->default('');
             $table->timestamps();
         });
     }
