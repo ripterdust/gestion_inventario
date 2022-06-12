@@ -202,8 +202,9 @@ input:focus {
             border-radius: $radius;
             outline: none;
             padding: 1.25rem;
-            background: none;
+            background: transparent;
             color: $fontColor;
+            z-index: 2;
 
             &:hover {
                 border-color: rgba($purple, 0.7);
@@ -223,6 +224,7 @@ input:focus {
             transition: top 200ms ease-in, left 200ms ease-in,
                 font-size 200ms ease-in;
             background: white;
+            z-index: 1;
         }
 
         &-input:focus ~ .form-control-label,
@@ -232,6 +234,7 @@ input:focus {
             font-size: 0.9rem;
             left: 0.8rem;
             color: $purple;
+            z-index: 3;
         }
     }
 }
