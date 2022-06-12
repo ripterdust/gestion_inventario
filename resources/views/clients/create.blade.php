@@ -58,6 +58,10 @@
                 required/>
                 <label for="phone" class="form-control-label">Teléfono</label>
             </div>
+
+            <div class="form-submit">
+                <button class="button">Agregar cliente</button>
+            </div>
         </form>
 
     </div>
