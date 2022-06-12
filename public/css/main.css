@@ -169,6 +169,7 @@ input:focus {
   background: white;
   position: relative;
   height: 3rem;
+  margin-bottom: 1em;
 }
 .form .form-control-input {
   position: absolute;
