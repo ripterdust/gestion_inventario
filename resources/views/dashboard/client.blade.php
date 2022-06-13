@@ -60,5 +60,12 @@
                 </tr>
             @endforeach
         </table>
+
+        {{-- Pagination --}}
+        <div class="pagination">
+            @if ($clients->links()->paginator->hasPages())
+                {{ $clients->links() }}
+            @endif
+        </div>
     </div>
 @endsection
