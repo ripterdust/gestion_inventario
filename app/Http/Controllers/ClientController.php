@@ -14,8 +14,20 @@ class ClientController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+
+        if($request->has('search')){
+            $search = $request->search;
+
+            $clients = Client::where('name', 'like', "%{$search}%")
+                ->get();
+
+            return view('dashboard.client', [
+                'clients' => $clients,
+                'total' => count($clients)
+            ]);
+        }
 
         $clients = Client::all();
 
