@@ -18,7 +18,7 @@
         </div>
     </div>
 
-    <div class="box">
+    <div class="search">
         <form action="{{ route('clients') }}" method="GET" class="form">
             <div class="form-control">
                 <input type="text" class="form-control-input" name="search" placeholder=" "/>

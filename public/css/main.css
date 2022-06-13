@@ -45,6 +45,29 @@ input:focus {
   color: #7928ca;
 }
 
+.search {
+  width: 500%;
+  background: white;
+  max-height: 100%;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 1em;
+  padding: 0.5em;
+  max-width: 40vw;
+  margin-bottom: 0.5em;
+}
+.search .form .form-control {
+  margin-bottom: 0;
+  height: 2.5rem;
+}
+.search .form .form-control-input {
+  padding: 0.5em;
+}
+.search .form .form-control-label {
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+}
+
 .box {
   width: 100%;
   background: white;

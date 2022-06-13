@@ -23,6 +23,7 @@ a {
     position: sticky;
     top: 0;
 }
+
 // Button styles
 .button {
     background-image: $gradient;
@@ -41,6 +42,33 @@ a {
 input:focus {
     outline-color: $purple;
     color: $purple;
+}
+
+// Search box
+.search {
+    width: 500%;
+    background: white;
+    max-height: 100%;
+    box-shadow: $boxShadow;
+    border-radius: 1em;
+    padding: 0.5em;
+    max-width: calc(50vw / 5 * 4);
+    margin-bottom: 0.5em;
+    .form {
+        .form-control {
+            margin-bottom: 0;
+            height: 2.5rem;
+            &-input {
+                padding: 0.5em;
+            }
+
+            &-label {
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 14px;
+            }
+        }
+    }
 }
 
 // white box bg
