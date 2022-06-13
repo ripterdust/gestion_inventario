@@ -76,6 +76,11 @@ Route::get('clients/{id}/edit', [ClientController::class, 'edit'])
     ->middleware('auth')
     ->name('client.edit');
 
+Route::patch('clients/{id}/patch', [ClientController::class, 'update'])
+    ->middleware('auth')
+    ->name('clients.patch');
+
+
 // Sales
 Route::get('/sales', [SalesController::class, 'index'])
     ->middleware('auth')

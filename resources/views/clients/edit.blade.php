@@ -10,9 +10,9 @@
 
         {{-- Form to add the client --}}
 
-        <form action="{{ route('clients.store') }}" method="post" class="form">
+        <form action="{{ route('clients.patch', ['id' => $client->id]) }}" method="post" class="form">
         @csrf
-        @method('POST')
+        @method('PATCH')
             
             @error('mail')
                 <div class="error">
