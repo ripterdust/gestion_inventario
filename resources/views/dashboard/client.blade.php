@@ -17,6 +17,15 @@
             </div>
         </div>
     </div>
+
+    <div class="box">
+        <form action="{{ route('clients') }}" method="GET" class="form">
+            <div class="form-control">
+                <input type="text" class="form-control-input" name="search" placeholder=" "/>
+                <label for="search" class="form-control-label">Búsqueda</label>
+            </div>
+        </form>
+    </div>
     <div class="box table_list">
         <div class="title title-with-btn">
             Pacientes
