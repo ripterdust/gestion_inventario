@@ -56,6 +56,7 @@
                 autocomplete="off"
                 placeholder=" " 
                 name="name"
+                value="{{ $client->name }}"
                 required/>
                 <label for="name" class="form-control-label">Nombre completo</label>    
             </div>
@@ -67,6 +68,7 @@
                     autocomplete="off"
                     placeholder=" "
                     class="form-control-input"
+                    value="{{ $client->birth }}"
                     required/>
             </div>
 
@@ -77,6 +79,7 @@
                 autocomplete="off"
                 placeholder=" "
                 name="mail"
+                value={{ $client->mail }}
                 required/>
                 <label for="mail" class="form-control-label">Correo electrónico</label>    
             </div>
@@ -89,6 +92,7 @@
                     autocomplete="off"
                     placeholder=" "
                     class="form-control-input"
+                    value="{{ $client->nit }}"
                     required/>
                 <label for="nit" class="form-control-label">Nit</label>
             </div>
@@ -100,6 +104,7 @@
                 autocomplete="off"
                 placeholder=" "
                 name="adress"
+                value="{{ $client->adress }}"
                 required/>
                 <label for="adress" class="form-control-label">Dirección</label>
             </div>
@@ -111,6 +116,7 @@
                 autocomplete="off"
                 placeholder=" "
                 name="phone"
+                value="{{ $client->phone }}"
                 oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
                 required/>
                 <label for="phone" class="form-control-label">Teléfono</label>
