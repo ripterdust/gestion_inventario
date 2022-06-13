@@ -21,7 +21,7 @@ class ClientController extends Controller
             $search = $request->search;
 
             $clients = Client::where('name', 'like', "%{$search}%")
-                ->get();
+                ->simplePaginate(4);
 
             return view('dashboard.client', [
                 'clients' => $clients,
@@ -29,7 +29,7 @@ class ClientController extends Controller
             ]);
         }
 
-        $clients = Client::all();
+        $clients = Client::simplePaginate(4);
 
 
         return view('dashboard.client', [
