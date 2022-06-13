@@ -83,6 +83,10 @@ Route::patch('clients/{id}/patch', [ClientController::class, 'update'])
 Route::get('client/{id}/delete', [ClientController::class, 'destroy'])
     ->middleware('auth')
     ->name('clients.destroy');
+    
+Route::get('client/{id}', [ClientController::class, 'show'])
+    ->middleware('auth')
+    ->name('client.show');
 
 // Sales
 Route::get('/sales', [SalesController::class, 'index'])

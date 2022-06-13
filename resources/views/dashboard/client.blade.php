@@ -46,7 +46,7 @@
             <!-- List of clients -->
             @foreach($clients as $client)
                 <tr>
-                    <td>{{ $client->name }}</td>
+                    <td><a href="{{ route('client.show', ['id' => $client->id]) }}">{{ $client->name }}</a></td>
                     <td>{{ $client->nit }}</td>
                     <td>{{ $client->mail }}</td>
                     <td>
