@@ -57,6 +57,8 @@ Route::patch('/test/{id}/update', [TestController::class, 'update'])
 Route::get('tests/{id}/result', [TestController::class, 'show'])
     ->middleware('auth')
     ->name('test.show');
+
+
 // Cients
 Route::get('/clients', [ClientController::class, 'index'])
     ->middleware('auth')
@@ -69,6 +71,10 @@ Route::get('/clients/new', [ClientController::class, 'create'])
 Route::post('/clients', [ClientController::class, 'store'])
     ->middleware('auth')
     ->name('clients.store');
+
+Route::get('clients/{id}', [ClientController::class, 'edit'])
+    ->middleware('auth')
+    ->name('client.edit');
 
 // Sales
 Route::get('/sales', [SalesController::class, 'index'])
