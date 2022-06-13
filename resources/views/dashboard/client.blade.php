@@ -44,7 +44,7 @@
                         <a href="{{ route('client.edit', ['id' => $client->id]) }}" class="action mr">
                             <i class="fa-solid fa-user-pen"></i>
                         </a>
-                        <a href="" class="action">
+                        <a href="{{ route('clients.destroy', ['id' => $client->id]) }}" class="action">
                             <i class="fa-solid fa-ban"></i>
                         </a>
                     </td>
