@@ -26,6 +26,7 @@ return new class extends Migration
                 ->string('adress')
                 ->default('');
             $table->timestamps();
+            
         });
     }
 
