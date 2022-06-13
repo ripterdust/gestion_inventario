@@ -19,8 +19,10 @@ class ClientController extends Controller
 
         $clients = Client::all();
         
+
         return view('dashboard.client', [
-            'clients' => $clients
+            'clients' => $clients,
+            'total' => count($clients)
         ]);
     }
 

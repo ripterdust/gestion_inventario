@@ -9,7 +9,7 @@
             <div class="text">
                 <div class="title">Total Pacientes</div>
                 <div class="number">
-                    100
+                    {{ $total }}
                 </div>
             </div>
             <div class="icon">
