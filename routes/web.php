@@ -72,7 +72,7 @@ Route::post('/clients', [ClientController::class, 'store'])
     ->middleware('auth')
     ->name('clients.store');
 
-Route::get('clients/{id}', [ClientController::class, 'edit'])
+Route::get('clients/{id}/edit', [ClientController::class, 'edit'])
     ->middleware('auth')
     ->name('client.edit');
 

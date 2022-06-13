@@ -18,7 +18,7 @@ class ClientController extends Controller
     {
 
         $clients = Client::all();
-        
+
 
         return view('dashboard.client', [
             'clients' => $clients,
@@ -83,7 +83,8 @@ class ClientController extends Controller
      */
     public function edit($id)
     {
-        //
+
+        return view('clients.edit');
     }
 
     /**
@@ -108,5 +109,4 @@ class ClientController extends Controller
     {
         //
     }
-
 }

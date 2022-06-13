@@ -41,7 +41,7 @@
                     <td>{{ $client->nit }}</td>
                     <td>{{ $client->mail }}</td>
                     <td>
-                        <a href="" class="action mr">
+                        <a href="{{ route('client.edit', ['id' => $client->id]) }}" class="action mr">
                             <i class="fa-solid fa-user-pen"></i>
                         </a>
                         <a href="" class="action">
