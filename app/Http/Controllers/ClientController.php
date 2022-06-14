@@ -17,6 +17,8 @@ class ClientController extends Controller
     public function index(Request $request)
     {
 
+
+        $total = Client::count();
         if($request->has('search')){
             $search = $request->search;
 
@@ -25,7 +27,7 @@ class ClientController extends Controller
 
             return view('dashboard.client', [
                 'clients' => $clients,
-                'total' => count($clients)
+                'total' => $total
             ]);
         }
 
@@ -34,7 +36,7 @@ class ClientController extends Controller
 
         return view('dashboard.client', [
             'clients' => $clients,
-            'total' => count($clients)
+            'total' => $total
         ]);
     }
 
@@ -84,6 +86,8 @@ class ClientController extends Controller
      */
     public function show($id)
     {
+
+        $client = Client::find($id);
         return view('clients.show');
     }
 
@@ -120,7 +124,6 @@ class ClientController extends Controller
         ]);
 
         $client = Client::find($id);
-
         $client->name = $request->name;
         $client->birth = $request->birth;
         $client->mail = $request->mail;
