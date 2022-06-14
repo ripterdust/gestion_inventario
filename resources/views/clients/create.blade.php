@@ -68,6 +68,7 @@
                     placeholder=" "
                     class="form-control-input"
                     required/>
+                    <label for="date" class="form-control-label">Fecha de nacimiento</label>
             </div>
 
             <div class="form-control">
