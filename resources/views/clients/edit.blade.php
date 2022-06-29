@@ -56,7 +56,6 @@
                 autocomplete="off"
                 placeholder=" " 
                 name="name"
-                value="{{ $client->name }}"
                 required/>
                 <label for="name" class="form-control-label">Nombre completo</label>    
             </div>
