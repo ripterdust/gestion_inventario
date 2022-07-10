@@ -23,7 +23,7 @@ values('HEMATOLOGIA'),
 /* ('', '', '[]', '[]') */
 INSERT INTO laboratories(category, name, parameters)
 values 
-('HEMATOLOGIA', 'HEMATOLOGIA COMPLETA 22/P ERITROSEDIMENTACION INCLUIDA', '{}'),
+('1', 'HEMATOLOGIA COMPLETA 22/P ERITROSEDIMENTACION INCLUIDA', '{}'),
 ('HEMATOLOGIA', 'ERITROSEDIMENTACION', '{}'),
 ('HEMATOLOGIA', 'CLASIFICACION DE ANEMIAS', '{}'),
 ('HEMATOLOGIA', 'FROTE PERIFERICO', '{}'),
@@ -39,6 +39,7 @@ values
 ('HEMATOLOGIA', 'ELECTROFORESIS DE HEMOGLOBINA', '{}'),
 ('HEMATOLOGIA', 'ELECTROFORESIS DE PROTEINAS', '{}'),
 ('HEMATOLOGIA', 'ELECTROFORESIS DE LIPOPROTEINAS', '{}');
+
 
 
 /* HEMOTASIS */
@@ -57,6 +58,15 @@ set
     parameters = '{"Rec. Globulos blancos":"5000 - 10,000 mm3","Rec. Globulos rojos":"4,5000,000 - 10,000,00 mm3","Hemoglobina":"12.6 - 16.0 gr/dr","Plaquetas":"150.000 - 500.00/ mm3","Formula Referencia":"","Segmentados":"45 - 64%","Linfositos":"20 - 45%","Monocitos":"0 - 5%","Eosinofilos":"1.0 - 5.0%","Velocidad de sedmentación":"0 - 15 mm/hrs"}'
 where id = 1;
 
+-- Estructura de base de datos
+
+-- // Lboratory
+
+laboratory -> lab_cd cat_fk lab_nm, lab_pc
+
+fields -> laboratory_id, fields_pm (Rec. Globulos blancos), fields_rgmin 5000 fields_rgmax 10000 fields_tp 'm3'
+
+/laboratories - select lab_nm, cat_nm, lab_pc
 
 /* Creating new client */
 

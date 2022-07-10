@@ -51,6 +51,17 @@
             
             <div class="form-control">
                 <input 
+                    type="text" 
+                    name="nit"
+                    autocomplete="off"
+                    placeholder=" "
+                    class="form-control-input"
+                    required/>
+                <label for="nit" class="form-control-label">Nit</label>
+            </div>
+            
+            <div class="form-control">
+                <input 
                 type="text"
                 class="form-control-input"
                 autocomplete="off"
@@ -83,16 +94,6 @@
             </div>
 
             
-            <div class="form-control">
-                <input 
-                    type="text" 
-                    name="nit"
-                    autocomplete="off"
-                    placeholder=" "
-                    class="form-control-input"
-                    required/>
-                <label for="nit" class="form-control-label">Nit</label>
-            </div>
 
             <div class="form-control">
                 <input 
