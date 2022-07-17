@@ -62,11 +62,11 @@ where id = 1;
 
 -- // Lboratory
 
-laboratory -> lab_cd cat_fk lab_nm, lab_pc
+-- laboratory -> lab_cd cat_fk lab_nm, lab_pc
 
-fields -> laboratory_id, fields_pm (Rec. Globulos blancos), fields_rgmin 5000 fields_rgmax 10000 fields_tp 'm3'
+-- fields -> laboratory_id, fields_pm (Rec. Globulos blancos), fields_rgmin 5000 fields_rgmax 10000 fields_tp 'm3'
 
-/laboratories - select lab_nm, cat_nm, lab_pc
+-- /laboratories - select lab_nm, cat_nm, lab_pc
 
 /* Creating new client */
 
