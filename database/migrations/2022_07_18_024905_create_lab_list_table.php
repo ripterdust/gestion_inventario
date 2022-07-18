@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('lab_list', function (Blueprint $table) {
+        Schema::create('lab_lists', function (Blueprint $table) {
             $table->bigIncrements('lab_id');            
             $table->bigInteger('cat_id')->unsigned();
             $table->foreign('cat_id')->references('id')->on('categories');
@@ -33,6 +33,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('lab_list');
+        Schema::dropIfExists('lab_lists');
     }
 };
