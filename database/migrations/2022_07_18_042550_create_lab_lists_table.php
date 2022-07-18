@@ -19,6 +19,8 @@ return new class extends Migration
             $table->foreign('cat_id')->references('id')->on('categories');
             $table->bigInteger('client_id')->unsigned();
             $table->foreign('client_id')->references('id')->on('clients');
+            $table->bigInteger('field_id')->unsigned();
+            $table->foreign('field_id')->references('field_id')->on('fields');
             $table->string('lab_name', 100);
             $table->double('lab_pc');
             $table->timestamps();
