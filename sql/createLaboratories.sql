@@ -22,10 +22,10 @@ values('HEMATOLOGIA'),
 INSERT INTO fields(cat_id, field_pm, field_rgmin, field_rgmax, field_tp)
     VALUES
 (1, 'Rec. Globulos blancos', '5000.00', '10000.00', 'mm3'),
-(1, 'Rec. Globulos rojos', '4,500.00', '10,000.00', 'mm3'),
+(1, 'Rec. Globulos rojos', '4500.00', '10000.00', 'mm3'),
 (1, 'Hemoglobina', '12.6', '16.0', 'gr/dr'),
 (1, 'Plaquetas', '150.00', '500.00', 'mm3'),
-(1, 'Formula Referencia', "", "", ""),
+(1, 'Formula Referencia', '0', '0', ''),
 (1, 'Segmentados', '45', '64', '%'),
 (1, 'Linfositos', '20', '45', '%'),
 (1, 'Monocitos', '0', '5', '%'),
@@ -36,6 +36,10 @@ INSERT INTO fields(cat_id, field_pm, field_rgmin, field_rgmax, field_tp)
 /* Exámenes de hematología */
 
 /* ('', '', '[]', '[]') */
+
+INSERT INTO lab_lists(client_id, field_id, cat_id, lab_name, lab_pc)
+    VALUES
+(1, 1, 1, 'HEMATOLOGIA COMPLETA 22/P ERITROSEDIMENTACION INCLUIDA', '200');
 
 INSERT INTO laboratories(category, name, parameters)
 values 
@@ -55,11 +59,6 @@ values
 ('HEMATOLOGIA', 'ELECTROFORESIS DE HEMOGLOBINA', '{}'),
 ('HEMATOLOGIA', 'ELECTROFORESIS DE PROTEINAS', '{}'),
 ('HEMATOLOGIA', 'ELECTROFORESIS DE LIPOPROTEINAS', '{}');
-
-
-INSERT INTO lab_lists(client_id, field_id, cat_id, lab_name, lab_pc)
-    VALUES
-(1, '5000')
 
 /* HEMOTASIS */
 INSERT INTO laboratories(category, name, parameters)
