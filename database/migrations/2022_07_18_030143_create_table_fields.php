@@ -15,9 +15,11 @@ return new class extends Migration
     {
         Schema::create('fields', function (Blueprint $table) {
             $table->bigIncrements('field_id');
+            $table->bigInteger('cat_id')->unsigned();
+            $table->foreign('cat_id')->references('id')->on('categories');
             $table->string('field_pm', 45);
-            $table->integer('field_rgmin');
-            $table->integer('field_rgmax');
+            $table->double('field_rgmin');
+            $table->double('field_rgmax');
             $table->string('field_tp', 5);
             $table->timestamps();
         });
