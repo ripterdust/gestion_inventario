@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('fields', function (Blueprint $table) {
             $table->bigIncrements('field_id');
             $table->bigInteger('lab_id')->unsigned();
-            $table->foreign('lab_id')->references('lab_id')->on('lab_list');
+            $table->foreign('lab_id')->references('lab_id')->on('lab_lists');
             $table->string('field_pm', 45);
             $table->integer('field_rgmin');
             $table->integer('field_rgmax');
