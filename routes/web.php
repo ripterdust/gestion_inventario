@@ -9,7 +9,8 @@ use App\Http\Controllers\SessionsController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\ClientController;
-use App\Http\Controllers\LaboratoryController;
+#use App\Http\Controllers\LaboratoryController;
+use App\Http\Controllers\LabListController;
 use App\Http\Controllers\SalesController;
 use App\Http\Controllers\InventoryController;
 
@@ -95,7 +96,7 @@ Route::get('/sales', [SalesController::class, 'index'])
 
 // Laboratory
 
-Route::get('/laboratory', [LaboratoryController::class, 'index'])
+Route::get('/laboratory', [LabListController::class, 'index'])
     ->middleware('auth')
     ->name('laboratory');
 
