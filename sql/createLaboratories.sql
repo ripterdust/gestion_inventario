@@ -60,9 +60,9 @@ where id = 1;
 
 -- Estructura de base de datos
 
--- // Lboratory
+-- // Laboratory
 
--- laboratory -> lab_cd cat_fk lab_nm, lab_pc
+-- laboratory -> lab_cod cat_fk lab_nm, lab_pc
 
 -- fields -> laboratory_id, fields_pm (Rec. Globulos blancos), fields_rgmin 5000 fields_rgmax 10000 fields_tp 'm3'
 
