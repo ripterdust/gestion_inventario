@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('field_pm', 45);
             $table->double('field_rgmin');
             $table->double('field_rgmax');
-            $table->string('field_tp', 5);
+            $table->string('field_tp', 12);
             $table->timestamps();
         });
     }
