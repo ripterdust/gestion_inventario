@@ -1,3 +1,4 @@
+-- Active: 1658080016491@@127.0.0.1@3306@sistema_inventario
 use sistema_inventario;
 
 ## Creating the categories
@@ -18,12 +19,27 @@ values('HEMATOLOGIA'),
 ('DROGAS'),
 ('MICROSCOPIA');
 
+INSERT INTO fields(cat_id, field_pm, field_rgmin, field_rgmax, field_tp)
+    VALUES
+(1, 'Rec. Globulos blancos', '5000.00', '10000.00', 'mm3'),
+(1, 'Rec. Globulos rojos', '4,500.00', '10,000.00', 'mm3'),
+(1, 'Hemoglobina', '12.6', '16.0', 'gr/dr'),
+(1, 'Plaquetas', '150.00', '500.00', 'mm3'),
+(1, 'Formula Referencia', "", "", ""),
+(1, 'Segmentados', '45', '64', '%'),
+(1, 'Linfositos', '20', '45', '%'),
+(1, 'Monocitos', '0', '5', '%'),
+(1, 'Eosinofilos', '1.0', '5.0', '%'),
+(1, 'Velocidad de sedmentación', '0', '15', 'mm/hrs');
+
+
 /* Exámenes de hematología */
 
 /* ('', '', '[]', '[]') */
+
 INSERT INTO laboratories(category, name, parameters)
 values 
-('1', 'HEMATOLOGIA COMPLETA 22/P ERITROSEDIMENTACION INCLUIDA', '{}'),
+('HEMATOLOGIA COMPLETA 22/P ERITROSEDIMENTACION INCLUIDA', '{}'),
 ('HEMATOLOGIA', 'ERITROSEDIMENTACION', '{}'),
 ('HEMATOLOGIA', 'CLASIFICACION DE ANEMIAS', '{}'),
 ('HEMATOLOGIA', 'FROTE PERIFERICO', '{}'),
@@ -41,6 +57,9 @@ values
 ('HEMATOLOGIA', 'ELECTROFORESIS DE LIPOPROTEINAS', '{}');
 
 
+INSERT INTO lab_lists(client_id, field_id, cat_id, lab_name, lab_pc)
+    VALUES
+(1, '5000')
 
 /* HEMOTASIS */
 INSERT INTO laboratories(category, name, parameters)
@@ -55,7 +74,7 @@ values
 
 update laboratories 
 set 
-    parameters = '{"Rec. Globulos blancos":"5000 - 10,000 mm3","Rec. Globulos rojos":"4,5000,000 - 10,000,00 mm3","Hemoglobina":"12.6 - 16.0 gr/dr","Plaquetas":"150.000 - 500.00/ mm3","Formula Referencia":"","Segmentados":"45 - 64%","Linfositos":"20 - 45%","Monocitos":"0 - 5%","Eosinofilos":"1.0 - 5.0%","Velocidad de sedmentación":"0 - 15 mm/hrs"}'
+    parameters = '{"Rec. Globulos rojos":"4,5000,000 - 10,000,00 mm3","Hemoglobina":"12.6 - 16.0 gr/dr","Plaquetas":"150.000 - 500.00/ mm3","Formula Referencia":"","Segmentados":"45 - 64%","Linfositos":"20 - 45%","Monocitos":"0 - 5%","Eosinofilos":"1.0 - 5.0%","Velocidad de sedmentación":"0 - 15 mm/hrs"}'
 where id = 1;
 
 -- Estructura de base de datos
