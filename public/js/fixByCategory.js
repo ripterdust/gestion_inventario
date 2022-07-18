@@ -12,15 +12,17 @@ laboratories.map(({ category, name }) => {
 
 // Changing the tests
 const changeTests = (category) => {
-    const cats = categories[category];
     laboratorySelect.innerHTML = "";
-
-    if (cats)
-        cats.map((cat) => {
-            laboratorySelect.innerHTML += `
-                <option value="${cat}">${cat}</option>
+    console.log(category);
+    if (category)
+        laboratories.map(labs => {
+            ({lab_name, id} = labs)
+            if(id - category == 0){
+                laboratorySelect.innerHTML += `
+                <option value="${id}">${lab_name}</option>
             `;
-        });
+            }
+        })
 };
 
 changeTests(categorySelect.value);
