@@ -120,9 +120,10 @@ class TestController extends Controller
         $test = Test::find($id)->first('TESTName');
 
         $laboratory = DB::table('tests')
-            ->select('fields.field_id', 'fields.field_pm', 'fields.field_rgmin', 'fields.field_rgmax', 'fields.field_tp')
+            ->select('tests.TESTName', 'fields.field_id', 'fields.field_pm', 'fields.field_rgmin', 'fields.field_rgmax', 'fields.field_tp')
             ->join('fields', 'tests.cat_id', '=', 'fields.cat_id')
             ->where('tests.id', '=', "$id")
+            ->orderBy('tests.created_at', 'asc')
             ->get();
         return view('dashboard.tests.edit', [
             'parameters' => $laboratory, 
@@ -147,7 +148,7 @@ class TestController extends Controller
         // Getting data
         $raw = $request->toArray();
         $params = array_splice($raw, 2, count($raw));
-        
+
         $test->result = json_encode($params);
         $test->state = 0;
         $test->save();
