@@ -3,12 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 // PDF
 use PDF;
 // Models
 use App\Models\Test;
-use App\Models\Laboratory;
+use App\Models\Lab_list;
 use App\Models\Category;
 use App\Models\Client;
 
@@ -39,11 +40,15 @@ class TestController extends Controller
     public function create()
     {
 
-        $categories = Category::select('category')
+        $categories = Category::select('id', 'category')
             ->get();
-        $laboratories = Laboratory::select('name', 'category')
-            ->get();
-
+        // $laboratories = Lab_list::select('lab_name', 'cat_id')
+        //     ->get();
+        $laboratories = DB::table('lab_types')
+        ->join('fields', 'lab_types.field_id', '=', 'fields.field_id')
+        ->join('categories', 'lab_types.cat_id', '=', 'categories.id')
+        ->select('lab_types.lab_name', 'categories.id', 'lab_types.lab_id')
+        ->get();
         $clients = Client::select('name')
             ->get();
 
@@ -71,6 +76,7 @@ class TestController extends Controller
         $test = new Test;
         $test->CLIName = $request->client;
         $test->TESTName = $request->test;
+        $test->cat_id = $request->category;
         $test->result = '{}';
         $test->save();
         
@@ -112,10 +118,12 @@ class TestController extends Controller
     public function edit($id)
     {
         $test = Test::find($id)->first('TESTName');
-        $laboratory = Laboratory::select('parameters')
-            ->where('name', $test->TESTName)
-            ->get();
 
+        $laboratory = DB::table('tests')
+            ->select('fields.field_id', 'fields.field_pm', 'fields.field_rgmin', 'fields.field_rgmax', 'fields.field_tp')
+            ->join('fields', 'tests.cat_id', '=', 'fields.cat_id')
+            ->where('tests.id', '=', "$id")
+            ->get();
         return view('dashboard.tests.edit', [
             'parameters' => $laboratory, 
             'test' => $test,
@@ -137,17 +145,10 @@ class TestController extends Controller
         $test = Test::find($id);
 
         // Getting data
-        $keys = array_keys($request->toArray());
-        $array = array();
-
-        for ($i=0; $i < count($keys); $i++) { 
-            $name = $keys[$i];
-            if($name[0] != '_'){
-                $array[$name] = $request[$name];
-            }
-        }
+        $raw = $request->toArray();
+        $params = array_splice($raw, 2, count($raw));
         
-        $test->result = json_encode($array);
+        $test->result = json_encode($params);
         $test->state = 0;
         $test->save();
 
