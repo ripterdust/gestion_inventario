@@ -4,6 +4,7 @@ use sistema_inventario;
 ## Creating the categories
 DELETE FROM categories;
 
+
 INSERT INTO categories(category)
 values('HEMATOLOGIA'), 
 ('HEMOTASIS'),
