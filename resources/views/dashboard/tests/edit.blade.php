@@ -2,10 +2,10 @@
 
 @section('title', 'Agregar información')
 
-@section('content')
+@section('content') 
 
 <div class="box">
-    <div class="title">{!! $test->TESTName !!}</div>
+    <div id="title" class="title">---</div>
 
     <form action="{{route('test.patch', ['id' => $id])}}" method="post" class="formDataTest">
         @method('PATCH')
@@ -16,17 +16,22 @@
 </div>
 
 <script>
-    const parameters = JSON.parse({!! $parameters !!}[0]?.parameters);
+    console.log({!! $parameters !!});
+    //const parameters = JSON.parse({!! $parameters !!});
+    const parameters = {!! $parameters !!};
     const form = document.querySelector('#params');
+    const title = document.querySelector('#title');
     Object.keys(parameters).map((paramFind) => {
-        const param = parameters[paramFind];
+        const {TESTName, field_id, field_pm, field_rgmin, field_rgmax, field_tp} = parameters[paramFind];
+        placeholder = `${field_rgmin} - ${field_rgmax} ${field_tp}`
         form.innerHTML += `
             <div class="param">
-                <span class="name">${paramFind}</span>
-                <input type="text" class="value" name="${paramFind}" placeholder="Ingresa el valor" />
-                <span class="paramsTest">${param}</span>
+                <span class="name">${field_pm}</span>
+                <input type="text" class="value" name="${field_pm}" placeholder="${placeholder}" />
+                <span class="paramsTest">${placeholder}</span>
             </div>
         `;
+        title.innerHTML = TESTName;
     })
 
 </script>
