@@ -35,7 +35,10 @@ INSERT INTO fields(cat_id, field_pm, field_rgmin, field_rgmax, field_tp)
 (1, 'Linfositos', '20', '45', '%'),
 (1, 'Monocitos', '0', '5', '%'),
 (1, 'Eosinofilos', '1.0', '5.0', '%'),
-(1, 'Velocidad de sedmentación', '0', '15', 'mm/hrs');
+(1, 'Velocidad de sedmentación', '0', '15', 'mm/hrs'),
+
+-- HEMOTASIS CAMPOS
+(2, 'Campo de Prueba1', '10', '20', 'mm3');
 
 INSERT INTO lab_types(field_id, cat_id, lab_name, lab_pc)
     VALUES
@@ -53,21 +56,15 @@ INSERT INTO lab_types(field_id, cat_id, lab_name, lab_pc)
 (1, 1, 'CRIOGLOBULINAS', '200'),
 (1, 1, 'ELECTROFORESIS DE HEMOGLOBINA', '200'),
 (1, 1, 'ELECTROFORESIS DE PROTEINAS', '200'),
-(1, 1, 'ELECTROFORESIS DE LIPOPROTEINAS', '200');
-
-
--- LLENADO EN APP
-INSERT INTO lab_lists()
+(1, 1, 'ELECTROFORESIS DE LIPOPROTEINAS', '200'),
+(2, 2, 'TIEMPO DE PROTOMBINA (TP)', '115'),
+(2, 2, 'TIEMPOPARCIAL DE TROMBOPLASTINA (PTP)', '117'),
+(2, 2, 'INR', '128'),
+(2, 2, 'TIEMPO DE COAGULACION', '135'),
+(2, 2, 'TIEMPO DE SANGRIA', '75'),
+(2, 2, 'FIBRIOGENO', '80');
 
 /* HEMOTASIS */
-INSERT INTO laboratories(category, name, parameters)
-values 
-('HEMOTASIS', 'TIEMPO DE PROTOMBINA (TP)', '{}'),
-('HEMOTASIS', 'TIEMPOPARCIAL DE TROMBOPLASTINA (PTP)', '{}'),
-('HEMOTASIS', 'INR', '{}'),
-('HEMOTASIS', 'TIEMPO DE COAGULACION', '{}'),
-('HEMOTASIS', 'TIEMPO DE SANGRIA', '{}'),
-('HEMOTASIS', 'FIBRIOGENO', '{}');
 
 /* Exámenes de hematología */
 /* ('', '', '[]', '[]') */
