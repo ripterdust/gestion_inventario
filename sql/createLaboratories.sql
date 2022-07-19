@@ -32,33 +32,27 @@ INSERT INTO fields(cat_id, field_pm, field_rgmin, field_rgmax, field_tp)
 (1, 'Eosinofilos', '1.0', '5.0', '%'),
 (1, 'Velocidad de sedmentación', '0', '15', 'mm/hrs');
 
-
-/* Exámenes de hematología */
-
-/* ('', '', '[]', '[]') */
-
-INSERT INTO lab_lists(client_id, field_id, cat_id, lab_name, lab_pc)
+INSERT INTO lab_types(field_id, cat_id, lab_name, lab_pc)
     VALUES
-(1, 1, 1, 'HEMATOLOGIA COMPLETA 22/P ERITROSEDIMENTACION INCLUIDA', '200');
+(1, 1, 'HEMATOLOGIA COMPLETA 22/P ERITROSEDIMENTACION INCLUIDA', '399'),
+(1, 1, 'ERITROSEDIMENTACION', '247'),
+(1, 1, 'CLASIFICACION DE ANEMIAS', '890'),
+(1, 1, 'FROTE PERIFERICO', '123'),
+(1, 1, 'GOTA GRUESA', '546'),
+(1, 1, 'GRUPO SANGUINEO Y FACTOR RH', '200'),
+(1, 1, 'HEMOGLOBINA - HEMATOCRITO', '200'),
+(1, 1, 'RECUENTO DE BLANCOS Y FORMULA', '200'),
+(1, 1, 'RECUENTO DE EOSINOFILOS', '200'),
+(1, 1, 'RECUENTO DE PLAQUETAS', '200'),
+(1, 1, 'Recuento de Reticulositos', '200'),
+(1, 1, 'CRIOGLOBULINAS', '200'),
+(1, 1, 'ELECTROFORESIS DE HEMOGLOBINA', '200'),
+(1, 1, 'ELECTROFORESIS DE PROTEINAS', '200'),
+(1, 1, 'ELECTROFORESIS DE LIPOPROTEINAS', '200');
 
-INSERT INTO laboratories(category, name, parameters)
-values 
-('HEMATOLOGIA COMPLETA 22/P ERITROSEDIMENTACION INCLUIDA', '{}'),
-('HEMATOLOGIA', 'ERITROSEDIMENTACION', '{}'),
-('HEMATOLOGIA', 'CLASIFICACION DE ANEMIAS', '{}'),
-('HEMATOLOGIA', 'FROTE PERIFERICO', '{}'),
-('HEMATOLOGIA', 'GOTA GRUESA', '{}'),
-('HEMATOLOGIA', 'GRUPO SANGUINEO Y FACTOR RH', '{}'),
-('HEMATOLOGIA', 'HEMOGLOBINA- HEMATOCRITO', '{}'),
-('HEMATOLOGIA', 'RECUENTO DE BLANCOS Y FORMULA', '{}'),
-('HEMATOLOGIA', 'RECUENTO DE EOSINOFILOS', '{}'),
-('HEMATOLOGIA', 'RECUENTO DE ERITROCITOS', '{}'),
-('HEMATOLOGIA', 'RECUENTO DE PLAQUETAS ', '{}'),
-('HEMATOLOGIA', 'Recuento de Reticulositos', '{}'),
-('HEMATOLOGIA', 'CRIOGLOBULINAS', '{}'),
-('HEMATOLOGIA', 'ELECTROFORESIS DE HEMOGLOBINA', '{}'),
-('HEMATOLOGIA', 'ELECTROFORESIS DE PROTEINAS', '{}'),
-('HEMATOLOGIA', 'ELECTROFORESIS DE LIPOPROTEINAS', '{}');
+
+-- LLENADO EN APP
+INSERT INTO lab_lists()
 
 /* HEMOTASIS */
 INSERT INTO laboratories(category, name, parameters)
@@ -70,6 +64,8 @@ values
 ('HEMOTASIS', 'TIEMPO DE SANGRIA', '{}'),
 ('HEMOTASIS', 'FIBRIOGENO', '{}');
 
+/* Exámenes de hematología */
+/* ('', '', '[]', '[]') */
 
 update laboratories 
 set 
