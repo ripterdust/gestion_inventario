@@ -4,7 +4,10 @@ use sistema_inventario;
 ## Creating the categories
 DELETE FROM categories;
 
-
+-- NOTAS:
+-- Se asume que cada categoria comparte los mismos campos entre laboratorios
+-- Por ejemplo todos los laboratorios de Hematología tienen los mismos campos
+-- 
 INSERT INTO categories(category)
 values('HEMATOLOGIA'), 
 ('HEMOTASIS'),
@@ -19,6 +22,7 @@ values('HEMATOLOGIA'),
 ('MICROBIOLOGIA'),
 ('DROGAS'),
 ('MICROSCOPIA');
+
 
 INSERT INTO fields(cat_id, field_pm, field_rgmin, field_rgmax, field_tp)
     VALUES
