@@ -89,6 +89,9 @@ Route::get('client/{id}', [ClientController::class, 'show'])
     ->middleware('auth')
     ->name('client.show');
 
+Route::get('client/obtiene/{nit}', [ClientController::class, 'searchByNit'])
+    ->name('client.nit');
+
 // Sales
 Route::get('/sales', [SalesController::class, 'index'])
     ->middleware('auth')

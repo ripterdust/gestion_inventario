@@ -16,9 +16,7 @@
     </div>
 
     <div class="box table_list">
-        <div class="title">
-            Laboratorios
-        </div>
+         <div class="title title-with-btn">Laboratorios <a href="{{ route('test.new') }}" class="button">Nuevo laboratorio</a></div>
 
         <table class="table">
 
