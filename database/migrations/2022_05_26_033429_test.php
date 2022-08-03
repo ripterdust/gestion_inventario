@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('CLIName');
             $table->string('TESTName');
+            $table->integer('cat_id');
             $table->timestamps();
             $table
                 ->integer('state')// 0 -> finished, 1 -> inclomplete,

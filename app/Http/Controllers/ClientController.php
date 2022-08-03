@@ -147,4 +147,10 @@ class ClientController extends Controller
         $client->delete();
         return redirect()->route('clients');
     }
+
+    public function getByNit($nit){
+        $client = Client::getByNit($nit);
+        return $client;
+
+    }
 }

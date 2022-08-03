@@ -16,9 +16,7 @@
     </div>
 
     <div class="box table_list">
-        <div class="title">
-            Laboratorios
-        </div>
+         <div class="title title-with-btn">Laboratorios <a href="{{ route('test.new') }}" class="button">Nuevo laboratorio</a></div>
 
         <table class="table">
 
@@ -32,9 +30,10 @@
             <!-- Table body -->
             @foreach($laboratories as $laboratory)
                 <tr>
-                    <td>{{ $laboratory->name }}</td>
+                    
+                    <td>{{ $laboratory->lab_name }}</td>
                     <td>{{ $laboratory->category }}</td>
-                    <td>Q.{{ number_format($laboratory->price, 2) }}</td>
+                    <td>Q.{{ number_format($laboratory->lab_pc, 2) }}</td>
                 </tr>
             @endforeach
             
@@ -42,7 +41,7 @@
 
         <div class="pagination">
             @if ($laboratories->links()->paginator->hasPages())
-                {{ $laboratories->links() }}
+                {{ $laboratories->links()}}
             @endif
         </div>
     </div>

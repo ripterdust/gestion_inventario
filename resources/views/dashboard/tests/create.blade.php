@@ -31,7 +31,7 @@
                 <label for="test">Categoría:</label>
                 <select name="category" id="test" required>
                     @foreach($categories as $category)
-                        <option value="{{ $category->category }}">
+                        <option value="{{ $category->id }}">
                             {{ $category->category }}
                         </option>
                     @endforeach
@@ -56,7 +56,6 @@
 
     <script>
         const laboratories = {!! $laboratories !!};
-        console.log(laboratories)
     </script>
     <script src="{{ asset('js/fixByCategory.js') }}"></script>
 @endsection
