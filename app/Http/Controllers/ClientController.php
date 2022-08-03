@@ -151,6 +151,7 @@ class ClientController extends Controller
     public function getByNit($nit){
         $client = Client::getByNit($nit);
         return $client;
+        
 
     }
 }
