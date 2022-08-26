@@ -17,9 +17,11 @@ class LabTypeController extends Controller
         ->select('lab_types.lab_name', 'categories.id', 'lab_types.lab_pc', 'categories.category')
         ->simplePaginate(4);
         
+        $packCount = 1;
         return view('laboratory.index', [
             'count' => $count,
-            'laboratories' => $laboratories
+            'laboratories' => $laboratories,
+            'packCount' => $packCount
         ]);
     }
 }

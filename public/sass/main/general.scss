@@ -6,6 +6,18 @@
     font-family: "Poppins", sans-serif;
 }
 
+%shadow {
+    box-shadow: $boxShadow;
+}
+
+%boxStyles {
+    @extend %shadow;
+    width: 100%;
+    background: white;
+    max-height: 100%;
+    border-radius: 2em;
+    padding: 1.5em;
+}
 body {
     display: grid;
     grid-template-columns: 1fr 4fr;
@@ -44,6 +56,14 @@ input:focus {
     color: $purple;
 }
 
+.mt-1 {
+    margin-top: 1em;
+}
+
+.mt-2 {
+    margin-top: 2em;
+}
+
 // Search box
 .search {
     width: 500%;
@@ -73,12 +93,7 @@ input:focus {
 
 // white box bg
 .box {
-    width: 100%;
-    background: white;
-    max-height: 100%;
-    box-shadow: $boxShadow;
-    border-radius: 2em;
-    padding: 1.5em;
+    @extend %boxStyles;
     max-width: calc(100vw / 5 * 4);
 
     .title {
@@ -267,6 +282,51 @@ input:focus {
             left: 0.8rem;
             color: $purple;
             z-index: 3;
+        }
+    }
+}
+
+.title-section {
+    margin-top: 1.5em;
+    max-width: 50%;
+    padding: 1em;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+    .card {
+        @extend %boxStyles;
+        width: 100%;
+        transition: 0.1s ease-in-out;
+        text-align: center;
+
+        &:hover {
+            cursor: pointer;
+            transform: scale(1.05);
+        }
+
+        .title {
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .description {
+            text-align: center;
+            font-size: 14px;
+            margin: 0.5em 0;
+        }
+
+        .content {
+            padding: 1em;
+            list-style: none;
+        }
+
+        .button {
+            text-align: center;
+            margin-top: 1em;
+            font-weight: bold;
         }
     }
 }

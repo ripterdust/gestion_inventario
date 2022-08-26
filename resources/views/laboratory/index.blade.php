@@ -13,6 +13,15 @@
                 <i class="fa-solid fa-virus-covid"></i>
             </div>
         </div>
+        <div class="metric">
+            <div class="text">
+                <div class="title">Total de paquetes</div>
+                <div class="number">{{ $packCount }}</div>
+            </div>
+            <div class="icon">
+                <i class="fa-solid fa-boxes-packing"></i>
+            </div>
+        </div>
     </div>
 
     <div class="box table_list">
@@ -45,4 +54,36 @@
             @endif
         </div>
     </div>
+
+    <div class="box mt-1 title-section">
+        <div class="title title-with-btn">
+            Paquetes de laboratorios  <a href="{{ route('test.new') }}" class="button">Nuevo paquete</a>
+        </div>
+    </div>
+
+    <div class="grid mt-2">
+        @foreach($packs as $pack)
+            <a class="card" href="#">
+                <div class="title"> {{ $pack->name }} </div>
+                <div class="description">
+                    @if($pack->description)
+                        {{ $pack-> description }}
+                    @else
+                        N/A
+                    @endif
+                </div>
+                <ul class="content">
+                    <li>Nombre examen</li>
+                </ul>
+                <div class="price">
+                    Q. 10.00
+                </div>
+                <div class="button">
+                    Comprar
+                </div>
+            </a>
+        @endforeach
+        
+    </div>
+  
 @endsection

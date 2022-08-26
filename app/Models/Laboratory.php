@@ -9,7 +9,4 @@ class Laboratory extends Model
 {
     use HasFactory;
 
-    public function getByCategory($category){
-        // Obtener todos por categoría
-    }
 }

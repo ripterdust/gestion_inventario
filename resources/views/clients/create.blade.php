@@ -53,6 +53,7 @@
                 <input 
                     type="text" 
                     name="nit"
+                    id="nit"
                     autocomplete="off"
                     placeholder=" "
                     class="form-control-input"
@@ -127,5 +128,11 @@
         </form>
 
     </div>
+
+    <script src="{{ asset('js/helpers/validateNit.js') }}"></script>
+    <script>
+        const urlClientValidation = "{{ route('client.nit', ) }}"
+    </script>
+    <script src='{{ asset("js/validateClient.js", 1 ) }}' type="module" ></script>
 
 @endsection

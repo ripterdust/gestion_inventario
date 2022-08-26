@@ -9,7 +9,7 @@ use App\Http\Controllers\SessionsController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\ClientController;
-#use App\Http\Controllers\LaboratoryController;
+use App\Http\Controllers\LaboratoryController;
 use App\Http\Controllers\LabTypeController;
 use App\Http\Controllers\SalesController;
 use App\Http\Controllers\InventoryController;
@@ -89,9 +89,6 @@ Route::get('client/{id}', [ClientController::class, 'show'])
     ->middleware('auth')
     ->name('client.show');
 
-Route::get('client/obtiene/{nit}', [ClientController::class, 'searchByNit'])
-    ->name('client.nit');
-
 // Sales
 Route::get('/sales', [SalesController::class, 'index'])
     ->middleware('auth')
@@ -99,7 +96,7 @@ Route::get('/sales', [SalesController::class, 'index'])
 
 // Laboratory
 
-Route::get('/laboratory', [LabTypeController::class, 'index'])
+Route::get('/laboratory', [LaboratoryController::class, 'index'])
     ->middleware('auth')
     ->name('laboratory');
 

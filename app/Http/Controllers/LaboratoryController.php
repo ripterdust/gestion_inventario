@@ -9,6 +9,9 @@ use Illuminate\Http\Request;
 // Laboratory
 use App\Models\Laboratory;
 
+// Packs
+use App\Models\Pack;
+
 class LaboratoryController extends Controller
 {
     /**
@@ -25,10 +28,14 @@ class LaboratoryController extends Controller
         $laboratories = Laboratory::select('price', 'category', 'name')
             ->simplePaginate(4);
         
+        $packCount = Pack::all()->count();
+        $packs = Pack::all();
 
         return view('laboratory.index', [
             'count' => $count,
-            'laboratories' => $laboratories
+            'laboratories' => $laboratories,
+            'packCount' => $packCount,
+            'packs' => $packs
         ]);
     }
 

@@ -8,6 +8,18 @@
   font-family: "Poppins", sans-serif;
 }
 
+.grid .card, .box {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.grid .card, .box {
+  width: 100%;
+  background: white;
+  max-height: 100%;
+  border-radius: 2em;
+  padding: 1.5em;
+}
+
 body {
   display: grid;
   grid-template-columns: 1fr 4fr;
@@ -45,6 +57,14 @@ input:focus {
   color: #7928ca;
 }
 
+.mt-1 {
+  margin-top: 1em;
+}
+
+.mt-2 {
+  margin-top: 2em;
+}
+
 .search {
   width: 500%;
   background: white;
@@ -69,12 +89,6 @@ input:focus {
 }
 
 .box {
-  width: 100%;
-  background: white;
-  max-height: 100%;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  border-radius: 2em;
-  padding: 1.5em;
   max-width: 80vw;
 }
 .box .title {
@@ -237,6 +251,45 @@ input:focus {
   left: 0.8rem;
   color: #7928ca;
   z-index: 3;
+}
+
+.title-section {
+  margin-top: 1.5em;
+  max-width: 50%;
+  padding: 1em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em;
+}
+.grid .card {
+  width: 100%;
+  transition: 0.1s ease-in-out;
+  text-align: center;
+}
+.grid .card:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+.grid .card .title {
+  font-weight: bold;
+  font-size: 20px;
+}
+.grid .card .description {
+  text-align: center;
+  font-size: 14px;
+  margin: 0.5em 0;
+}
+.grid .card .content {
+  padding: 1em;
+  list-style: none;
+}
+.grid .card .button {
+  text-align: center;
+  margin-top: 1em;
+  font-weight: bold;
 }
 
 aside {

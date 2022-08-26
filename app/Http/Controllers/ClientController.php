@@ -148,7 +148,8 @@ class ClientController extends Controller
         return redirect()->route('clients');
     }
 
-    public function getByNit($nit){
+    public function getByNit($nit = null){
+        if(!$nit) return ['Invalid nit'];
         $client = Client::getByNit($nit);
         return $client;
         
