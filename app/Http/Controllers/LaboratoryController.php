@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+// **** Query builder
+use Illuminate\Support\Facades\DB;
 // **** Models
 
 // Laboratory
@@ -25,10 +26,11 @@ class LaboratoryController extends Controller
         $count = Laboratory::all()
             ->count();
 
-        $laboratories = Laboratory::select('price', 'category', 'name')
+        $laboratories = DB::table('laboratories')
+            ->leftJoin('categories', 'laboratories.category' , '=', 'categories.id')
+            ->select('laboratories.name', 'price', 'categories.category as category')
             ->simplePaginate(4);
         
-
         $packs = Pack::select('pack_id', 'name', 'price', 'description')
             ->orderBy('pack_id','desc')
             ->limit(4)

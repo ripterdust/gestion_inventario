@@ -9,9 +9,9 @@ use Illuminate\Support\Facades\DB;
 use PDF;
 // Models
 use App\Models\Test;
-use App\Models\Lab_list;
 use App\Models\Category;
 use App\Models\Client;
+use App\Models\Laboratory;
 
 class TestController extends Controller
 {
@@ -44,11 +44,7 @@ class TestController extends Controller
             ->get();
         // $laboratories = Lab_list::select('lab_name', 'cat_id')
         //     ->get();
-        $laboratories = DB::table('lab_types')
-        ->join('fields', 'lab_types.field_id', '=', 'fields.field_id')
-        ->join('categories', 'lab_types.cat_id', '=', 'categories.id')
-        ->select('lab_types.lab_name', 'categories.id', 'lab_types.lab_id')
-        ->get();
+        $laboratories = Laboratory::all();
         $clients = Client::select('name')
             ->get();
 

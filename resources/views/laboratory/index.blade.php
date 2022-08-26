@@ -29,12 +29,13 @@
             </tr>
 
             <!-- Table body -->
-            @foreach($laboratories as $laboratory)
+            @foreach($laboratories as $laboratory)  
+           
                 <tr>
                     
-                    <td>{{ $laboratory->lab_name }}</td>
+                    <td>{{ $laboratory->name }}</td>
                     <td>{{ $laboratory->category }}</td>
-                    <td>Q.{{ number_format($laboratory->lab_pc, 2) }}</td>
+                    <td>Q.{{ number_format($laboratory->price, 2) }}</td>
                 </tr>
             @endforeach
             
