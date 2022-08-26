@@ -13,7 +13,7 @@ use App\Http\Controllers\LaboratoryController;
 use App\Http\Controllers\LabTypeController;
 use App\Http\Controllers\SalesController;
 use App\Http\Controllers\InventoryController;
-
+use App\Http\Controllers\PackController;
 // ******** ROUTER
 
 // **** Validation
@@ -99,6 +99,11 @@ Route::get('/sales', [SalesController::class, 'index'])
 Route::get('/laboratory', [LaboratoryController::class, 'index'])
     ->middleware('auth')
     ->name('laboratory');
+
+// Pack
+Route::get('/pack/{id}', [PackController::class, 'show'])
+    ->middleware('auth')
+    ->name('pack.show');
 
 // Inventory
 Route::get('/inventory', [InventoryController::class, 'index'])
