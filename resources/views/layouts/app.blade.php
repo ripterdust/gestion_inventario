@@ -38,6 +38,10 @@
                 <i class="fa-solid fa-virus-covid"></i>
                 <span>Laboratorios</span>
             </a>
+            <a href="{{ route('pack') }}" class="option">
+                <i class="fa-solid fa-boxes-packing"></i>
+                <span>Paquetes</span>
+            </a>
             <a href="{{ route('employees') }}" class="option">
                 <i class="fa-solid fa-people-carry-box"></i>
                 <span>Empleados</span>
@@ -50,6 +54,7 @@
                 <i class="fa-solid fa-boxes-stacked"></i>
                 <span>Inventario</span>
             </a>
+          
         </div>
     </aside>
 

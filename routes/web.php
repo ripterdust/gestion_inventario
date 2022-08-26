@@ -101,6 +101,10 @@ Route::get('/laboratory', [LaboratoryController::class, 'index'])
     ->name('laboratory');
 
 // Pack
+Route::get('/pack', [PackController::class, 'index'])
+    ->middleware('auth')
+    ->name('pack');
+
 Route::get('/pack/{id}', [PackController::class, 'show'])
     ->middleware('auth')
     ->name('pack.show');
