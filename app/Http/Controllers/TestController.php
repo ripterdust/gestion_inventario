@@ -75,7 +75,7 @@ class TestController extends Controller
         $test->cat_id = $request->category;
         $test->result = '{}';
         $test->save();
-        
+
         return redirect('tests');
     }
 
@@ -88,7 +88,7 @@ class TestController extends Controller
     public function show($id)
     {
         $test = Test::find($id);
-        
+
         $results = json_decode($test->result, true);
 
         $keys = array_keys($results);
@@ -100,7 +100,7 @@ class TestController extends Controller
             "date" => $test->created_at,
             "test" => $test->TESTName
         ];
-        
+
         $pdf = PDF::loadView('dashboard.tests.pdf', $data);
         return $pdf->stream();
     }
@@ -121,10 +121,12 @@ class TestController extends Controller
             ->where('tests.id', '=', "$id")
             ->orderBy('tests.created_at', 'asc')
             ->get();
-        return view('dashboard.tests.edit', [
-            'parameters' => $laboratory, 
-            'test' => $test,
-            'id' => $id
+        return view(
+            'dashboard.tests.edit',
+            [
+                'parameters' => $laboratory,
+                'test' => $test,
+                'id' => $id
             ],
         );
     }
